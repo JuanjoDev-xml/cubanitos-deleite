@@ -1,7 +1,40 @@
-.items-header{
+body{
+    font-family: Montserrat;
+}
+.header{
+    background: #F80097;
+    height: 8vh;
+    align-items: center;
+    align-content: center;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-size: 3vh;
+}
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 5px;
+}
+
+.header_ul{
     display: flex;
     gap: 1rem;
     list-style: none;
-    padding: 0;
+    padding: 5px;
     margin: 0;
+    margin-right: 5px;
+}
+.header_ul_li_a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu-toggle{
+    background: none;
+    border: none;
 }
