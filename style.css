@@ -13,12 +13,14 @@ body{
     align-items: center;
     color: #fff;
     font-size: 3vh;
+    height: 8vh;
 }
 .nav-left {
     display: flex;
     align-items: center;
     gap: 0.5rem;
     padding: 5px;
+    -ms-flex-align: center;
 }
 
 .header_ul{
@@ -37,4 +39,19 @@ body{
 .menu-toggle{
     background: none;
     border: none;
+    display: flex;
+}
+.mynaui--menu {
+    display: inline-block;
+    width: 4vh;
+    height: 4vh;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='none' stroke='%23000' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M4.5 6.5h15M4.5 12h15m-15 5.5h15'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    color: #fff;
 }
