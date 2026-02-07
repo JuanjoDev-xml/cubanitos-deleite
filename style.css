@@ -52,6 +52,7 @@ body{
     background: none;
     border: none;
     display: flex;
+    padding-left: 0;
 }
 .mynaui--menu {
     display: inline-block;
@@ -117,11 +118,12 @@ body{
 
 .cubanitos-card{
     box-sizing: border-box;
+    margin: 5px;
 }
 
 .cubanitos-img{
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     margin: 10px;
     object-fit: cover;
     box-sizing: border-box;
@@ -130,4 +132,10 @@ body{
 .carrusel{
     margin: 20px auto;
     display: flex;
+    max-width: 100vw;
+    background-color: #eee;
+}
+
+.cubanitos-card_h4{
+    margin-top: 0;
 }
