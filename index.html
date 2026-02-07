@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="assets/logo.ico" />
     <title>Cubanitos Deleite</title>
 </head>
 <body>
@@ -15,7 +16,7 @@
         <nav class="nav">
             <div class="nav-left">
                 <button class="menu-toggle"> <span class="mynaui--menu"></span> </button>
-                <span class="logo">Logo</span>
+                <span class="logo"><a class="logo_a" href="#"><img class="logo-img" src="assets/logo.png" alt="Cubanitos Deleite"></a></span>
             </div>
             <ul class="header_ul">
                 <li class="header_ul_li"> <a class="header_ul_li_a" href="#productos">Productos</a> </li>
@@ -23,7 +24,23 @@
             </ul>
         </nav>
     </header>
-    <main></main>
+    <main class="main">
+        <section class="hero">
+            <div class="hero_flex_item">
+                <h1 class="hero_title">Cubanitos Deleite</h1>
+                <h2 class="hero_subtitle">Endulzando momentos</h2>
+            </div>
+        </section>
+        <section class="productos">
+            <h3 class="productos_h3">Descubrí nuestros productos</h3>
+            <div class="carrusel">
+                <div class="cubanitos-card cubanitos-comunes">
+                    <img class="cubanitos-img cubanitos-comunes_img" src="assets/cubanitos-comunes.jpg" alt="Cubanitos comunes">
+                    <h4 class="cubanitos-comunes_h4">Cubanitos comunes</h4>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer></footer>
     <script src="code.js"></script>
 </body>
