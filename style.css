@@ -179,7 +179,7 @@ body{
     max-width: 1000px;
 }
 
-/* RAMO CUBANITOS -- flex */
+/* RAMO CUBANITOS */
 
 .ramo-cubanitos{
     text-align: center;
@@ -191,11 +191,11 @@ body{
     height: 300px;
     width: 300px;
     object-fit: cover;
-    box-sizing: border-box;  /* en desktop deberían estar uno al lado del otro con flex*/
+    box-sizing: border-box;
     border-radius: 5px;
 }
 
-/* BOX CUBANITOS -- flex */
+/* BOX CUBANITOS */
 
 .box-cubanitos{
     margin: auto;
