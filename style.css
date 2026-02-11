@@ -1,5 +1,6 @@
 body{
     font-family: Montserrat;
+    overflow-x: hidden;
 }
 
 /* HEADER */
@@ -9,7 +10,7 @@ body{
     height: 50px;
     align-items: center;
     align-content: center;
-    width: 100vw;
+    width: 100%;
     position: fixed;
 }
 .nav {
@@ -58,10 +59,11 @@ body{
     cursor: pointer;
     border: 1px solid #e8e8e8;
     transition: all 0.3s;
-    box-shadow: 1px 1px 10px #c5c5c5;
+    box-shadow: 1px 1px 10px #888a;
 }
 .a-productos:hover{
     color: #a80469;
+    box-shadow: 1px 1px 10px #888f;
 }
 .a-productos:active{
     color: #666;
@@ -93,6 +95,7 @@ body{
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
     color: #fff;
+    cursor: pointer;
 }
 
 /* MAIN */
@@ -167,10 +170,21 @@ body{
     margin-top: 0;
 }
 
+/* ENCARGOS */
+
+.encargos{
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1000px;
+}
+
 /* RAMO CUBANITOS -- flex */
 
 .ramo-cubanitos{
     text-align: center;
+    margin: auto;
+    padding: 10px;
 }
 
 .img-ramo{
@@ -184,7 +198,9 @@ body{
 /* BOX CUBANITOS -- flex */
 
 .box-cubanitos{
+    margin: auto;
     text-align: center;
+    padding: 10px;
 }
 
 .img-box{
@@ -209,9 +225,9 @@ body{
 
 .footer{
     background: #222;
-    width: 100vw;
     color: #fff;
     padding: 14px;
+    width: 100%;
 }
 
 .footer-descrip{
@@ -233,6 +249,7 @@ body{
 }
 .contactanos{
     margin-left: 10px;
+    margin-right: 10px;
 }
 
 .basil--instagram-outline {
