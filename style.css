@@ -10,6 +10,7 @@ body{
     align-items: center;
     align-content: center;
     width: 100vw;
+    position: fixed;
 }
 .nav {
     display: flex;
@@ -52,16 +53,25 @@ body{
     color: #F80097;
     padding: 8px 10px;
     font-size: 1em;
-    border-radius: 0.5em;
+    border-radius: 50px;
     background: #e8e8e8;
     cursor: pointer;
     border: 1px solid #e8e8e8;
     transition: all 0.3s;
-    box-shadow: 4px 4px 10px #c5c5c5, -4px -4px 10px #ffffff;
+    box-shadow: 1px 1px 10px #c5c5c5;
+}
+.a-productos:hover{
+    color: #a80469;
 }
 .a-productos:active{
     color: #666;
-    box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.a-contacto{
+    transition: all 0.3s;
+}
+.a-contacto:hover{
+    color: #ddd;
 }
 
 .menu-toggle{
@@ -247,4 +257,5 @@ body{
 
 .footer-info{
     margin: auto;
+    text-align: center;
 }
