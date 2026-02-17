@@ -43,7 +43,7 @@ body{
     list-style: none;
     padding: 5px;
     margin: 0;
-    margin-right: 5px;
+    margin-right: 16px;
 }
 .header_ul_li_a{
     text-decoration: none;
@@ -156,6 +156,7 @@ body{
     width: 150px;
     object-fit: cover;
     box-sizing: border-box;
+    border-radius: 5px;
 }
 
 .carrusel{
@@ -165,6 +166,8 @@ body{
     max-width: 800px;
     overflow-x: scroll;
     margin: auto;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #bbb;
 }
 
 .cubanitos-card_h4{
@@ -195,6 +198,12 @@ body{
     box-sizing: border-box;
     border-radius: 5px;
 }
+.img-ramo{
+    box-shadow: 0px 0px 10px #444;
+}
+.img-ramo:hover{
+    box-shadow: 0px 0px 18px #444;
+}
 
 /* BOX CUBANITOS */
 
@@ -210,6 +219,12 @@ body{
     object-fit: cover;
     box-sizing: border-box;
     border-radius: 5px;
+}
+.img-box{
+    box-shadow: 0px 0px 10px #444;
+}
+.img-box:hover{
+    box-shadow: 0px 0px 18px #444;
 }
 
 /* ABOUT */
@@ -295,7 +310,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-right: 30px;
+    margin-right: 40px;
 }
 @media (max-width: 650px) {
     .github{
