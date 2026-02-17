@@ -10,7 +10,7 @@ body{
     height: 50px;
     align-items: center;
     align-content: center;
-    width: 100%;
+    width: 100vw;
     position: fixed;
 }
 .nav {
@@ -124,6 +124,7 @@ body{
 .hero_flex_item{
     margin: auto;
     text-shadow: 0 0 15px #444;
+    width: 100vw;
 }
 .hero_title{
     color: #fff;
@@ -238,7 +239,7 @@ body{
     background: #222;
     color: #fff;
     padding: 14px;
-    width: 100%;
+    width: 100vw;
 }
 
 .footer-descrip{
