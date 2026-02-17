@@ -217,11 +217,18 @@ body{
     text-align: center;
     max-width: 800px;
     margin: auto;
+    padding: 18px;
+    padding-right: 24px;
 }
 
 .valores-ul{
     list-style: none;
+    margin: auto;
+    text-align: center;
+    line-height: 28px;
+    padding: 20px;
 }
+
 
 /* FOOTER */
 
