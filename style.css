@@ -3,6 +3,13 @@ body{
     overflow-x: hidden;
 }
 
+h3{
+    font-size: 1.4em;
+}
+h4{
+    font-size: 1.2em;
+}
+
 /* HEADER */
 
 .header{
@@ -172,6 +179,8 @@ body{
 
 .cubanitos-card_h4{
     margin-top: 0;
+    font-size: 1em;
+    font-weight: 600;
 }
 
 /* ENCARGOS */
@@ -237,12 +246,31 @@ body{
     padding-right: 24px;
 }
 
+.img-trofeo{
+    height: 340px;
+    width: auto;
+    object-fit: cover;
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #444;
+}
+.img-trofeo:hover{
+    box-shadow: 0px 0px 18px #444;
+    scale: 1.1;
+}
+.h4-mision, .h4-vision, .h4-valores, .h4-ubi{
+    margin-top: 60px;
+}
 .valores-ul{
     list-style: none;
     margin: auto;
     text-align: center;
     line-height: 28px;
     padding: 20px;
+}
+
+.p-ubi{
+    margin-bottom: 70px;
 }
 
 
@@ -312,7 +340,7 @@ body{
     align-items: flex-end;
     margin-right: 40px;
 }
-@media (max-width: 650px) {
+@media only screen and (max-width: 650px) {
     .github{
         align-items: center;
     }
