@@ -78,6 +78,7 @@ h4{
 
 .a-contacto{
     transition: all 0.3s;
+    margin-right: 10px;
 }
 .a-contacto:hover{
     color: #ddd;
