@@ -273,18 +273,18 @@ h4{
     width: 100vw;
 }
 
-.footer-descrip{
+.footer__div{
     margin: auto;
 }
 
-.footer-descrip_ul{
+.footer__div__ul{
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
 
-.footer-descrip_ul_li{
+.footer__div__ul__li{
     margin: 0;
 }
 .seguinos{
@@ -315,8 +315,7 @@ h4{
 
 /* FOOTER INFO */
 
-.footer-info{
-    margin: auto;
+.div-info{
     text-align: center;
 }
 
