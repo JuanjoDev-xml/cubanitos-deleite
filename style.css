@@ -226,7 +226,7 @@ h4{
 
 /* ABOUT */
 
-.about{
+.main__about{
     text-align: center;
     max-width: 800px;
     margin: auto;
@@ -249,7 +249,7 @@ h4{
 .h4-mision, .h4-vision, .h4-valores, .h4-ubi{
     margin-top: 60px;
 }
-.valores-ul{
+.main__about__ul{
     list-style: none;
     margin: auto;
     text-align: center;
