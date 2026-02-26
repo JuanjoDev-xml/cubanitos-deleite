@@ -116,12 +116,12 @@ h4{
 
 .main__hero{
     /*
-    background-image: url(assets/images/hero.png);
+    background-image: url(assets/images/hero.webp);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     */
-    background: url("assets/images/hero.png") center / cover no-repeat fixed;
+    background: url("assets/images/hero.webp") center / cover no-repeat fixed;
     height: 500px;
     width: 100vw;
     text-align: center;
