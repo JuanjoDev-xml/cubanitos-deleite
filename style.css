@@ -134,12 +134,11 @@ h4{
     text-shadow: 0 0 15px #444;
     width: 100vw;
 }
-.main__hero__div__h1{
+.main__hero__div{
     color: #fff;
-    font-size: 3em;
 }
-.main__hero__div__h2{
-    color: #fff;
+.main__hero__div__h1{
+    font-size: 3em;
 }
 
 /* PRODUCTOS */
