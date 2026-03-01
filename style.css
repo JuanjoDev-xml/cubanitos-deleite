@@ -148,16 +148,16 @@ h4{
     margin: auto;
 }
 
-.main__productos__h3{
+.productos__h3{
     font-weight: 600;
 }
 
-.main__productos__div-carrusel__div-card{
+.productos__div-carrusel__div-card{
     box-sizing: border-box;
     margin: 20px;
 }
 
-.main__productos__div-carrusel__div-card__img{
+.productos__div-carrusel__div-card__img{
     height: 150px;
     width: 150px;
     object-fit: cover;
@@ -165,7 +165,7 @@ h4{
     border-radius: 5px;
 }
 
-.main__productos__div-carrusel{
+.productos__div-carrusel{
     display: flex;
     max-width: 100vw;
     background-color: #f5f5f5;
@@ -176,7 +176,7 @@ h4{
     box-shadow: 0px 0px 10px #bbb;
 }
 
-.main__productos__div-carrusel__div-card__h4{
+.productos__div-carrusel__div-card__h4{
     margin-top: 0;
     font-size: 1em;
     font-weight: 600;
