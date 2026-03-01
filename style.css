@@ -35,16 +35,16 @@ h4{
     -ms-flex-align: center;
 }
 
-.logo_a{
+.logo__a{
     display: flex;
 }
 
-.logo-img{
+.logo__img{
     height: 28px;
     border-radius: 3px;
 }
 
-.header__nav__ul{
+.nav__ul{
     display: flex;
     gap: 1rem;
     list-style: none;
@@ -52,7 +52,7 @@ h4{
     margin: 0;
     margin-right: 16px;
 }
-.header__nav__ul__li__a{
+.nav__li__a{
     text-decoration: none;
     color: #fff;
 }
@@ -114,7 +114,7 @@ h4{
 
 /* HERO */
 
-.main__hero{
+.hero{
     /*
     background-image: url(assets/images/hero.webp);
     background-position: center;
@@ -133,17 +133,16 @@ h4{
     margin: auto;
     text-shadow: 0 0 15px #444;
     width: 100vw;
-}
-.main__hero__div{
     color: #fff;
 }
-.main__hero__div__h1{
+
+.hero-flex-item__title{
     font-size: 3em;
 }
 
 /* PRODUCTOS */
 
-.main__productos{
+.productos{
     text-align: center;
     width: 100vw;
     margin: auto;
