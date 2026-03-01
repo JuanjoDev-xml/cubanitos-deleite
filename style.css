@@ -52,7 +52,7 @@ h4{
     margin: 0;
     margin-right: 16px;
 }
-.nav__li__a{
+.nav__link{
     text-decoration: none;
     color: #fff;
 }
