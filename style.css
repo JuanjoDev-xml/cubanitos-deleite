@@ -20,7 +20,7 @@ h4{
     width: 100vw;
     position: fixed;
 }
-.header__nav {
+.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
