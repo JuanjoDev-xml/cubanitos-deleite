@@ -221,7 +221,7 @@ h4{
     padding-right: 24px;
 }
 
-.about__img_trofeo{
+.about__img--trofeo{
     height: 340px;
     width: auto;
     object-fit: cover;
@@ -229,11 +229,11 @@ h4{
     border-radius: 5px;
     box-shadow: 0px 0px 10px #444;
 }
-.about__img_trofeo:hover{
+.about__img--trofeo:hover{
     box-shadow: 0px 0px 18px #444;
     scale: 1.1;
 }
-.about__h4_mision, .about__h4_vision, .about__h4_valores, .about__h4_ubi{
+.about__h4--mision, .about__h4--vision, .about__h4--valores, .about__h4--ubi{
     margin-top: 60px;
 }
 .about__ul{
@@ -244,7 +244,7 @@ h4{
     padding: 20px;
 }
 
-.about__p_ubi{
+.about__p--ubi{
     margin-bottom: 70px;
 }
 
