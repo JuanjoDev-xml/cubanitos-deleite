@@ -17,7 +17,7 @@ h4{
     height: 50px;
     align-items: center;
     align-content: center;
-    width: 100vw;
+    width: 100%;
     position: fixed;
 }
 .nav {
@@ -109,7 +109,7 @@ h4{
 /* MAIN */
 
 .main{
-    width: 100vw;
+    width: 100%;
 }
 
 /* HERO */
@@ -123,7 +123,7 @@ h4{
     */
     background: url("assets/images/hero.webp") center / cover no-repeat fixed;
     height: 500px;
-    width: 100vw;
+    width: 100%;
     text-align: center;
 
     display: flex;
@@ -256,7 +256,7 @@ h4{
     background: #222;
     color: #fff;
     padding: 14px;
-    width: 100vw;
+    width: 100%;
 }
 
 .footer__descrip{
