@@ -32,7 +32,6 @@ h4{
     align-items: center;
     gap: 0.5rem;
     padding: 5px;
-    -ms-flex-align: center;
 }
 
 .logo__a{
@@ -227,6 +226,7 @@ h4{
     box-sizing: border-box;
     border-radius: 5px;
     box-shadow: 0px 0px 10px #444;
+    transition: all 0.3s;
 }
 .about__img--trofeo:hover{
     box-shadow: 0px 0px 18px #444;
