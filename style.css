@@ -20,14 +20,14 @@ h4{
     width: 100vw;
     position: fixed;
 }
-.header__nav {
+.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     color: #fff;
     font-size: 1em;
 }
-.nav-left {
+.nav__left {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -35,16 +35,16 @@ h4{
     -ms-flex-align: center;
 }
 
-.logo_a{
+.logo__a{
     display: flex;
 }
 
-.logo-img{
+.logo__img{
     height: 28px;
     border-radius: 3px;
 }
 
-.header__nav__ul{
+.nav__ul{
     display: flex;
     gap: 1rem;
     list-style: none;
@@ -52,7 +52,7 @@ h4{
     margin: 0;
     margin-right: 16px;
 }
-.header__nav__ul__li__a{
+.nav__link{
     text-decoration: none;
     color: #fff;
 }
@@ -114,7 +114,7 @@ h4{
 
 /* HERO */
 
-.main__hero{
+.hero{
     /*
     background-image: url(assets/images/hero.webp);
     background-position: center;
@@ -129,37 +129,35 @@ h4{
     display: flex;
     align-items: center;
 }
-.hero-flex-item{
+.hero__content{
     margin: auto;
     text-shadow: 0 0 15px #444;
     width: 100vw;
-}
-.main__hero__div__h1{
     color: #fff;
+}
+
+.hero__title{
     font-size: 3em;
-}
-.main__hero__div__h2{
-    color: #fff;
 }
 
 /* PRODUCTOS */
 
-.main__productos{
+.productos{
     text-align: center;
     width: 100vw;
     margin: auto;
 }
 
-.main__productos__h3{
+.productos__title{
     font-weight: 600;
 }
 
-.main__productos__div-carrusel__div-card{
+.product-card{
     box-sizing: border-box;
     margin: 20px;
 }
 
-.main__productos__div-carrusel__div-card__img{
+.product-card__img{
     height: 150px;
     width: 150px;
     object-fit: cover;
@@ -167,7 +165,7 @@ h4{
     border-radius: 5px;
 }
 
-.main__productos__div-carrusel{
+.carrusel{
     display: flex;
     max-width: 100vw;
     background-color: #f5f5f5;
@@ -178,7 +176,7 @@ h4{
     box-shadow: 0px 0px 10px #bbb;
 }
 
-.main__productos__div-carrusel__div-card__h4{
+.product-card__h4{
     margin-top: 0;
     font-size: 1em;
     font-weight: 600;
@@ -186,22 +184,22 @@ h4{
 
 /* ENCARGOS */
 
-.main__encargos{
+.encargos{
     margin: auto;
     display: flex;
     flex-wrap: wrap;
     max-width: 1000px;
 }
 
-/* RAMO CUBANITOS */
+/* RAMO CUBANITOS */ /* BOX CUBANITOS */
 
-.main__encargos__div-ramo{
+.ramo, .box{
     text-align: center;
     margin: auto;
     padding: 10px;
 }
 
-.main__encargos__div-ramo__img, .main__encargos__div-box__img{
+.ramo__img, .box__img{
     height: 300px;
     width: 300px;
     object-fit: cover;
@@ -209,24 +207,13 @@ h4{
     border-radius: 5px;
     box-shadow: 0px 0px 10px #444;
 }
-.main__encargos__div-ramo__img:hover{
+.ramo__img:hover, .box__img:hover{
     box-shadow: 0px 0px 18px #444; 
-}
-.main__encargos__div-box__img:hover{
-    box-shadow: 0px 0px 18px #444; 
-}
-
-/* BOX CUBANITOS */
-
-.main__encargos__div-box{
-    margin: auto;
-    text-align: center;
-    padding: 10px;
 }
 
 /* ABOUT */
 
-.main__about{
+.about{
     text-align: center;
     max-width: 800px;
     margin: auto;
@@ -234,7 +221,7 @@ h4{
     padding-right: 24px;
 }
 
-.img-trofeo{
+.about__img--trofeo{
     height: 340px;
     width: auto;
     object-fit: cover;
@@ -242,14 +229,14 @@ h4{
     border-radius: 5px;
     box-shadow: 0px 0px 10px #444;
 }
-.img-trofeo:hover{
+.about__img--trofeo:hover{
     box-shadow: 0px 0px 18px #444;
     scale: 1.1;
 }
-.h4-mision, .h4-vision, .h4-valores, .h4-ubi{
+.about__h4--mision, .about__h4--vision, .about__h4--valores, .about__h4--ubi{
     margin-top: 60px;
 }
-.main__about__ul{
+.about__ul{
     list-style: none;
     margin: auto;
     text-align: center;
@@ -257,7 +244,7 @@ h4{
     padding: 20px;
 }
 
-.p-ubi{
+.about__p--ubi{
     margin-bottom: 70px;
 }
 
@@ -273,18 +260,18 @@ h4{
     width: 100vw;
 }
 
-.footer__div{
+.footer__descrip{
     margin: auto;
 }
 
-.footer__div__ul{
+.footer__ul{
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
 
-.footer__div__ul__li{
+.footer__item{
     margin: 0;
 }
 .seguinos{
@@ -315,20 +302,20 @@ h4{
 
 /* FOOTER INFO */
 
-.div-info{
+.footer__info{
     text-align: center;
 }
 
 /* GITHUB */
 
-.github{
+.footer__info--github{
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     margin-right: 40px;
 }
 @media only screen and (max-width: 650px) {
-    .github{
+    .footer__info--github{
         align-items: center;
     }
 }
