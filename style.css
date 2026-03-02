@@ -134,7 +134,11 @@ h4{
     width: 100vw;
     color: #fff;
 }
-
+@media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll;
+    }
+}
 .hero__title{
     font-size: 3em;
 }
@@ -334,4 +338,8 @@ h4{
 
     cursor: pointer;
     color: #fff;
+}
+
+* {
+    outline: 1px solid red;
 }
