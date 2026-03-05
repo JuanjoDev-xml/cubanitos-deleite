@@ -131,7 +131,7 @@ h4{
 .hero__content{
     margin: auto;
     text-shadow: 0 0 15px #444;
-    width: 100vw;
+    width: 100%;
     color: #fff;
 }
 @media (max-width: 768px) {
