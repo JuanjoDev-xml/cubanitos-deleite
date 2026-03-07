@@ -246,7 +246,7 @@ h4{
     margin-right: 6px;
 }
 
-.about__mision, .about__vision{
+.about__mision, .about__vision, .about__valores{
     display: flex;
     flex-direction: row;
     justify-content: center;
