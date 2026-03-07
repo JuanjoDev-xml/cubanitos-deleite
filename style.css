@@ -255,7 +255,7 @@ h4{
     align-content: center;
 }
 
-.about__img--mision, .about__img--vision{
+.about__img--mision, .about__img--vision, .about__img--valores{
     height: 20px;
     width: auto;
 }
