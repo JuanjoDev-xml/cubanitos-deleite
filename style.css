@@ -246,7 +246,7 @@ h4{
     margin-right: 6px;
 }
 
-.about__mision, .about__vision, .about__valores{
+.about__mision, .about__vision, .about__valores, .about__ubi{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -255,7 +255,7 @@ h4{
     align-content: center;
 }
 
-.about__img--mision, .about__img--vision, .about__img--valores{
+.about__img--mision, .about__img--vision, .about__img--valores, .about__img--ubi{
     height: 20px;
     width: auto;
 }
