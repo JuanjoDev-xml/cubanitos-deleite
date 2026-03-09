@@ -275,6 +275,12 @@ h4{
 
 /* FOOTER */
 
+@media only screen and (max-width: 650px) {
+    .footer{
+        
+    }
+}
+
 /* FOOTER DESCRIP */
 
 .footer{
