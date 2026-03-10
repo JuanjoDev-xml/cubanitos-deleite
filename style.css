@@ -275,11 +275,7 @@ h4{
 
 /* FOOTER */
 
-@media only screen and (max-width: 650px) {
-    .footer__ul{
-        
-    }
-}
+
 
 /* FOOTER DESCRIP */
 
@@ -367,3 +363,16 @@ h4{
     color: #fff;
 }
 
+@media only screen and (max-width: 650px) {
+    .footer__ul{
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+    }
+    .footer__item{
+        align-self: flex-start;
+        margin: 0;
+        margin-bottom: 12px;
+    }
+    
+}
