@@ -26,17 +26,39 @@
 <body>
     <!-- Developer: https://github.com/JuanjoDev-xml -->
     <header class="header">
-        <nav class="nav">
-            <div class="nav__left">
-                <button class="menu-toggle" aria-label="Menu"> <span class="mynaui--menu"></span> </button>
-                <span class="logo"><a class="logo__a" href="#"><img class="logo__img" src="assets/images/logo.webp" alt="Cubanitos Deleite"></a></span>
-            </div>
-            <ul class="nav__ul">
-                <li class="nav__li"> <a class="nav__link a-productos" href="#productos">Productos</a> </li>
-                <li class="nav__li"> <a class="nav__link a-contacto" href="#contacto">Contacto</a> </li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="nav">
+        <div class="nav__left">
+            <!--
+                Sin cambios en el botón, queda igual que lo tuyo.
+                Solo agregamos aria-expanded="false" para accesibilidad.
+            -->
+            <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+                <span class="mynaui--menu"></span>
+            </button>
+            <span class="logo">
+                <a class="logo__a" href="#">
+                    <img class="logo__img" src="assets/images/logo.webp" alt="Cubanitos Deleite">
+                </a>
+            </span>
+        </div>
+        <ul class="nav__ul">
+            <li class="nav__li"> <a class="nav__link a-productos" href="#productos">Productos</a> </li>
+            <li class="nav__li"> <a class="nav__link a-contacto" href="#contacto">Contacto</a> </li>
+        </ul>
+    </nav>
+
+    <!--
+        El menú desplegable vive DENTRO del <header>
+        para que se posicione justo debajo de él.
+        Por defecto no tiene la clase "open", así que está oculto.
+    -->
+    <ul class="nav-menu" id="nav-menu">
+        <li class="nav-menu__item"><a class="nav-menu__link" href="#contacto">Contacto</a></li>
+        <li class="nav-menu__item"><a class="nav-menu__link" href="#acerca">Acerca de</a></li>
+        <li class="nav-menu__item"><a class="nav-menu__link" href="#mision">Misión</a></li>
+        <li class="nav-menu__item"><a class="nav-menu__link" href="#vision">Visión</a></li>
+    </ul>
+</header>
     <main class="main">
         <section class="hero">
             <div class="hero__content">
