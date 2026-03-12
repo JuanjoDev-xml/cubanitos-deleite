@@ -26,17 +26,38 @@
 <body>
     <!-- Developer: https://github.com/JuanjoDev-xml -->
     <header class="header">
-        <nav class="nav">
-            <div class="nav__left">
-                <button class="menu-toggle" aria-label="Menu"> <span class="mynaui--menu"></span> </button>
-                <span class="logo"><a class="logo__a" href="#"><img class="logo__img" src="assets/images/logo.webp" alt="Cubanitos Deleite"></a></span>
-            </div>
-            <ul class="nav__ul">
-                <li class="nav__li"> <a class="nav__link a-productos" href="#productos">Productos</a> </li>
-                <li class="nav__li"> <a class="nav__link a-contacto" href="#contacto">Contacto</a> </li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="nav">
+        <div class="nav__left">
+            <!--
+                Sin cambios en el botón, queda igual que lo tuyo.
+                Solo agregamos aria-expanded="false" para accesibilidad.
+            -->
+            <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
+                <span class="mynaui--menu"></span>
+            </button>
+            <span class="logo">
+                <a class="logo__a" href="#">
+                    <img class="logo__img" src="assets/images/logo.webp" alt="Cubanitos Deleite">
+                </a>
+            </span>
+        </div>
+        <ul class="nav__ul">
+            <li class="nav__li"> <a class="nav__link a-productos" href="#productos">Productos</a> </li>
+            <li class="nav__li"> <a class="nav__link a-contacto" href="#contacto">Contacto</a> </li>
+        </ul>
+    </nav>
+
+    <!--
+        El menú desplegable vive DENTRO del <header>
+        para que se posicione justo debajo de él.
+        Por defecto no tiene la clase "open", así que está oculto.
+    -->
+    <ul class="nav-menu" id="nav-menu">
+        <li class="nav-menu__item"><a class="nav-menu__link" href="#contacto">Contacto</a></li>
+        <li class="nav-menu__item"><a class="nav-menu__link" href="#about">Acerca de</a></li>
+        <li class="nav-menu__item"><a class="nav-menu__link" href="#mision">Misión y Visión</a></li>
+    </ul>
+</header>
     <main class="main">
         <section class="hero">
             <div class="hero__content">
@@ -104,21 +125,37 @@
             <p class="about__p">Somos un emprendimiento familiar, que trabaja para la excelencia en nuestros productos y la mejor atención con nuestros clientes.</p>
             <h4 class="about__h4 about__h4--trofeo">Ganadores del 3er puesto en cubanitos comunes 2025</h4>
             <img class="about__img about__img--trofeo" src="assets/images/trofeo-cubanito-simple.webp" alt="Trofeo mejor cubanito simple" title="Mejor cubanito simple" loading="lazy">
-            <h4 class="about__h4 about__h4--mision" id="mision">Misión</h4>
+            
+            <div class="about__mision">
+                <img class="about__img about__img--mision" src="assets/images/mision.webp" alt="Logo misión" loading="lazy">
+                <h4 class="about__h4 about__h4--mision" id="mision">Misión</h4>
+            </div>
             <p class="about__p about__p--mision">Endulzar momentos de las personas ofreciendo cubanitos artesanales de calidad,
                 con relleno generoso, baño artesanal y una atención cercana que haga
                 sentir especial a cada cliente.</p>
-            <h4 class="about__h4 about__h4--vision">Visión</h4>
+
+            <div class="about__vision">
+                <img class="about__img about__img--vision" src="assets/images/vision.webp" alt="Logo visión" loading="lazy">
+                <h4 class="about__h4 about__h4--vision">Visión</h4>
+            </div>
             <p class="about__p about__p--vision">Convertirnos en la marca de referente en <strong>Bahía Blanca</strong>
                 y la región, reconocida por la excelencia en nuestros productos, la
                 innovación en sabores y el compromiso con nuestros clientes.</p>
-            <h4 class="about__h4 about__h4--valores">Valores</h4>
+            
+            <div class="about__valores">
+                <img class="about__img--valores" src="assets/images/values.webp" alt="Logo valores" loading="lazy">
+                <h4 class="about__h4 about__h4--valores">Valores</h4>
+            </div>
             <ul class="about__ul">
                 <li class="about__ul__li"><strong>Calidad</strong> en lo que hacemos</li>
                 <li class="about__ul__li">Relleno y baño bien <strong>generosos</strong></li>
                 <li class="about__ul__li">Atención <strong>cálida</strong> y cercana</li>
             </ul>
-            <h4 class="about__h4 about__h4--ubi">Ubicación</h4>
+
+            <div class="about__ubi">
+                <img class="about__img about__img--ubi" src="assets/images/location.webp" alt="Logo ubicación" loading="lazy">
+                <h4 class="about__h4 about__h4--ubi">Ubicación</h4>
+            </div>
             <p class="about__p about__p--ubi">Encontranos en <strong>Corenfeld y Panamá</strong>, sábados y domingos de 16:30hs hasta 20:00hs.</p>
         </section>
     </main>

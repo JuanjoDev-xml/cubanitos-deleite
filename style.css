@@ -17,7 +17,7 @@ h4{
     height: 50px;
     align-items: center;
     align-content: center;
-    width: 100vw;
+    width: 100%;
     position: fixed;
 }
 .nav {
@@ -32,7 +32,6 @@ h4{
     align-items: center;
     gap: 0.5rem;
     padding: 5px;
-    -ms-flex-align: center;
 }
 
 .logo__a{
@@ -109,7 +108,7 @@ h4{
 /* MAIN */
 
 .main{
-    width: 100vw;
+    width: 100%;
 }
 
 /* HERO */
@@ -123,7 +122,7 @@ h4{
     */
     background: url("assets/images/hero.webp") center / cover no-repeat fixed;
     height: 500px;
-    width: 100vw;
+    width: 100%;
     text-align: center;
 
     display: flex;
@@ -132,10 +131,14 @@ h4{
 .hero__content{
     margin: auto;
     text-shadow: 0 0 15px #444;
-    width: 100vw;
+    width: 100%;
     color: #fff;
 }
-
+@media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll;
+    }
+}
 .hero__title{
     font-size: 3em;
 }
@@ -144,7 +147,7 @@ h4{
 
 .productos{
     text-align: center;
-    width: 100vw;
+    width: 100%;
     margin: auto;
 }
 
@@ -167,7 +170,6 @@ h4{
 
 .carrusel{
     display: flex;
-    max-width: 100vw;
     background-color: #f5f5f5;
     max-width: 800px;
     overflow-x: scroll;
@@ -206,6 +208,7 @@ h4{
     box-sizing: border-box;
     border-radius: 5px;
     box-shadow: 0px 0px 10px #444;
+    transition: all 0.3s;
 }
 .ramo__img:hover, .box__img:hover{
     box-shadow: 0px 0px 18px #444; 
@@ -228,14 +231,35 @@ h4{
     box-sizing: border-box;
     border-radius: 5px;
     box-shadow: 0px 0px 10px #444;
+    transition: all 0.3s;
 }
 .about__img--trofeo:hover{
     box-shadow: 0px 0px 18px #444;
     scale: 1.1;
 }
-.about__h4--mision, .about__h4--vision, .about__h4--valores, .about__h4--ubi{
+
+.about__mision, .about__vision, .about__valores, .about__ubi{
     margin-top: 60px;
 }
+
+.about__img--mision, .about__img--vision, .about__img--valores{
+    margin-right: 6px;
+}
+
+.about__mision, .about__vision, .about__valores, .about__ubi{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+}
+
+.about__img--mision, .about__img--vision, .about__img--valores, .about__img--ubi{
+    height: 20px;
+    width: auto;
+}
+
 .about__ul{
     list-style: none;
     margin: auto;
@@ -257,7 +281,7 @@ h4{
     background: #222;
     color: #fff;
     padding: 14px;
-    width: 100vw;
+    width: 100%;
 }
 
 .footer__descrip{
@@ -336,3 +360,86 @@ h4{
     cursor: pointer;
     color: #fff;
 }
+
+/* Footer Mobile */
+
+@media only screen and (max-width: 650px) {
+    .footer__ul{
+        display: flex;
+        list-style: none;
+        flex-direction: column;
+    }
+    .footer__item{
+        align-self: flex-start;
+        margin: 0;
+        margin-bottom: 12px;
+    }
+    
+}
+
+
+/* ── Menú desplegable ── */
+    .nav-menu {
+        /*
+            Oculto por defecto usando max-height: 0.
+            No usamos display:none porque ese valor no se puede
+            animar con CSS. Con max-height podemos hacer una
+            transición suave de 0 → altura visible.
+        */
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+
+        /*
+            Se posiciona respecto al <header> (que tiene position:fixed).
+            top: 100% significa "justo debajo del header".
+        */
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+
+        background: #F80097;    /* Mismo color que tu header */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        /* Sombra para que se vea flotando sobre el contenido */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+
+        /* Por encima del resto del contenido de la página */
+        z-index: 999;
+    }
+
+    /*
+        Cuando JS le agrega la clase "open",
+        el menú se expande suavemente hasta 300px de alto.
+        (El valor exacto no importa, solo que sea mayor a la altura real.)
+    */
+    .nav-menu.open {
+        max-height: 300px;
+    }
+
+    /* ── Cada ítem de la lista ── */
+    .nav-menu__item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .nav-menu__item:last-child {
+        border-bottom: none;
+    }
+
+    /* ── Los enlaces dentro del menú ── */
+    .nav-menu__link {
+        display: block;         /* Ocupa todo el ancho: más fácil de tocar en móvil */
+        padding: 14px 20px;
+        color: #fff;
+        text-decoration: none;
+        font-size: 1em;
+        transition: background 0.2s, padding-left 0.2s;
+    }
+
+    .nav-menu__link:hover {
+        background: rgba(255, 255, 255, 0.15);
+        padding-left: 28px;     /* Se corre un poco a la derecha al hacer hover */
+    }
