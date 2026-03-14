@@ -78,7 +78,11 @@ h4{
 .a-productos:active{
     color: #666;
 }
-
+@media only screen and (max-width: 650px){
+    .a-productos{
+        margin-right: -24px;
+    }
+}
 .a-contacto{
     transition: all 0.3s;
 }
