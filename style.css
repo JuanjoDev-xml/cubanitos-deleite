@@ -401,7 +401,6 @@ h4{
         padding: 0;
         margin: 0;
 
-        /* Sombra para que se vea flotando sobre el contenido */
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 
         /* Por encima del resto del contenido de la página */
