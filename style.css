@@ -3,6 +3,10 @@ body, html{
     overflow-x: hidden;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 h3{
     font-size: 1.4em;
 }
