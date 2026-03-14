@@ -1,4 +1,4 @@
-body{
+body, html{
     font-family: Montserrat;
     overflow-x: hidden;
 }
@@ -82,7 +82,11 @@ h4{
 .a-contacto:hover{
     color: #ddd;
 }
-
+@media only screen and (max-width: 650px) {
+    .a-contacto{
+        display: none;
+    }
+}
 .menu-toggle{
     background: none;
     border: none;
@@ -273,7 +277,7 @@ h4{
 }
 
 .about__img--ubi{
-    margin-right: 2px;
+    margin-right: 4px;
 }
 
 /* FOOTER */
@@ -396,12 +400,11 @@ h4{
         left: 0;
         width: 100%;
 
-        background: #F80097;    /* Mismo color que tu header */
+        background: #F80097;
         list-style: none;
         padding: 0;
         margin: 0;
 
-        /* Sombra para que se vea flotando sobre el contenido */
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 
         /* Por encima del resto del contenido de la página */
