@@ -82,7 +82,11 @@ h4{
 .a-contacto:hover{
     color: #ddd;
 }
-
+@media only screen and (max-width: 650px) {
+    .a-contacto{
+        display: none;
+    }
+}
 .menu-toggle{
     background: none;
     border: none;
