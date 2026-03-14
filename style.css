@@ -380,12 +380,6 @@ h4{
 
 /* ── Menú desplegable ── */
     .nav-menu {
-        /*
-            Oculto por defecto usando max-height: 0.
-            No usamos display:none porque ese valor no se puede
-            animar con CSS. Con max-height podemos hacer una
-            transición suave de 0 → altura visible.
-        */
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.3s ease;
