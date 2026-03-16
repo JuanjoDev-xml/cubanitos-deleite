@@ -312,10 +312,10 @@ h4{
 .footer__item{
     margin: 0;
 }
-.seguinos{
+.footer__item--seguinos{
     margin-right: 4px;
 }
-.contactanos{
+.footer__item--contactanos{
     margin-left: 10px;
     margin-right: 10px;
 }
@@ -334,7 +334,7 @@ h4{
     mask-size: 100% 100%;
     color: #fff;
 }
-.instagram-logo{
+.footer__item--instagram-logo{
     height: 24px;
 }
 
