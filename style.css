@@ -392,7 +392,9 @@ h4{
         margin: 0;
         margin-bottom: 12px;
     }
-    
+    .footer__info--github{
+        margin: 0;
+    }
 }
 
 
