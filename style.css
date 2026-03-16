@@ -79,8 +79,12 @@ h4{
     color: #666;
 }
 @media only screen and (max-width: 650px){
+    .nav__ul{
+        margin: 0;
+        padding: 0;
+    }
     .a-productos{
-        margin-right: -24px;
+        margin-right: -6px;
     }
 }
 .a-contacto{
