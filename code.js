@@ -51,7 +51,7 @@
  
     // Cuántos píxeles se desplaza cada vez que se presiona un botón.
     // 220 ≈ ancho de una card (150px imagen + 2x margen 20px) + un poco extra
-    const PASO = 220;
+    const PASO = window.innerWidth > 768 ? 440 : 220;
  
     // ── Función que actualiza qué botones se ven ──
     function actualizarBotones() {
