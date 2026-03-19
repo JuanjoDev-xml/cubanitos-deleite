@@ -23,6 +23,7 @@ h4{
     align-content: center;
     width: 100%;
     position: fixed;
+    z-index: 100;
 }
 .nav {
     display: flex;
@@ -208,7 +209,7 @@ h4{
         max-width: 800px;
         margin: auto;
     }
-
+ 
     /* ── Scroll suave en el carrusel ── */
     .carrusel {
         scroll-behavior: smooth;    /* El desplazamiento al clickear botones será suave */
@@ -230,7 +231,6 @@ h4{
         position: absolute;     /* Flotan sobre el carrusel */
         top: 50%;               /* Centrados verticalmente */
         transform: translateY(-50%);    /* Ajuste fino: sin esto quedarían corridos hacia abajo */
-
         background: #F80097;
         color: #fff;
         border: none;
