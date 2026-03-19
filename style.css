@@ -23,6 +23,7 @@ h4{
     align-content: center;
     width: 100%;
     position: fixed;
+    z-index: 100;
 }
 .nav {
     display: flex;
@@ -199,6 +200,89 @@ h4{
     font-weight: 600;
 }
 
+
+
+
+/* ── Contenedor relativo para poder posicionar los botones encima ── */
+    .carrusel-wrapper {
+        position: relative;     /* Los botones con position:absolute se ubican respecto a este div */
+        max-width: 800px;
+        margin: auto;
+    }
+ 
+    /* ── Scroll suave en el carrusel ── */
+    .carrusel {
+        scroll-behavior: smooth;    /* El desplazamiento al clickear botones será suave */
+        max-width: 100%;            /* En mobile ocupa todo el ancho disponible */
+
+        /*
+            Ocultamos la barra de scroll nativa (queda feo en desktop).
+            El scroll sigue funcionando igual con touch/trackpad.
+        */
+        scrollbar-width: none;          /* Firefox */
+        -ms-overflow-style: none;       /* IE / Edge viejo */
+    }
+    .carrusel::-webkit-scrollbar {
+        display: none;                  /* Chrome, Safari */
+    }
+
+    /* ── Estilos base de ambos botones ── */
+    .carrusel-btn {
+        position: absolute;     /* Flotan sobre el carrusel */
+        top: 50%;               /* Centrados verticalmente */
+        transform: translateY(-50%);    /* Ajuste fino: sin esto quedarían corridos hacia abajo */
+        background: #F80097;
+        color: #fff;
+        border: none;
+        border-radius: 50%;     /* Forma circular */
+        width: 36px;
+        height: 36px;
+        font-size: 1.1rem;
+        cursor: pointer;
+        z-index: 10;            /* Por encima de las cards */
+        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+
+        /* Transición para el fade de aparición/desaparición */
+        opacity: 1;
+        transition: opacity 0.3s ease, background 0.2s;
+    }
+
+    .carrusel-btn:hover {
+        background: #c8007a;
+    }
+
+    /* ── Posición de cada botón ── */
+    .carrusel-btn--izq {
+        left: -18px;    /* La mitad del botón (36px/2) queda fuera del carrusel */
+    }
+    .carrusel-btn--der {
+        right: -18px;
+    }
+
+    /*
+        La clase "hidden" hace el botón invisible e inaprensible.
+        opacity:0  →  se ve transparente (permite animar con transition)
+        pointer-events:none  →  aunque sea invisible, no se puede clickear
+    */
+    .carrusel-btn.hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    /* ══ MOBILE FIRST ══
+        En pantallas chicas los botones se achican
+        y se acercan más al borde del carrusel.
+    */
+    @media (max-width: 480px) {
+        .carrusel-btn {
+            width: 28px;
+            height: 28px;
+            font-size: 0.9rem;
+        }
+        .carrusel-btn--izq { left: 4px; }
+        .carrusel-btn--der { right: 4px; }
+    }
+
 /* ENCARGOS */
 
 .encargos{
@@ -291,6 +375,77 @@ h4{
     margin-right: 4px;
 }
 
+/* INSTAGRAM LOGO FLOTANTE */
+
+/* ── Botón flotante de Instagram ── */
+.ig-float {
+    position: fixed;        /* Siempre visible, fijo en la pantalla */
+    bottom: 20px;
+    right: 20px;
+    z-index: 200;           /* Por encima de todo, incluso del header */
+
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+
+    /* Degradado oficial de Instagram */
+    background: radial-gradient(circle at 30% 110%, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    /* Sin subrayado */
+    text-decoration: none;
+}
+
+/* ── Ícono SVG dentro del botón ── */
+.ig-float__icon {
+    width: 28px;
+    height: 28px;
+}
+
+/* ── Animación de rebote al hacer hover ── */
+.ig-float:hover {
+    /*
+        La animación "rebote" se define abajo con @keyframes.
+        0.5s es la duración, ease-in-out es la curva de velocidad.
+    */
+    animation: rebote 0.5s ease-in-out;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+/*
+    @keyframes define los pasos de la animación.
+    0%   → posición original
+    30%  → sube 10px
+    60%  → baja un poco (efecto de rebote real)
+    100% → vuelve al lugar
+*/
+@keyframes rebote {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-10px); }
+    60%  { transform: translateY(-4px); }
+    100% { transform: translateY(0); }
+}
+
+/* ── Mobile: un poco más chico ── */
+@media (max-width: 480px) {
+    .ig-float {
+        width: 44px;
+        height: 44px;
+        bottom: 16px;
+        right: 16px;
+    }
+    .ig-float__icon {
+        width: 23px;
+        height: 23px;
+    }
+}
+
 /* FOOTER */
 
 /* FOOTER DESCRIP */
@@ -354,8 +509,7 @@ h4{
 .footer__info--github{
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    margin-right: 40px;
+    align-items: flex-start;
 }
 @media only screen and (max-width: 650px) {
     .footer__info--github{
