@@ -43,7 +43,7 @@
         </div>
         <ul class="nav__ul">
             <li class="nav__li"> <a class="nav__link a-productos" href="#productos">Productos</a> </li>
-            <li class="nav__li"> <a class="nav__link a-contacto" href="#contacto">Contacto</a> </li>
+            <li class="nav__li"> <a class="nav__link a-contacto" href="https://www.instagram.com/cubanitosdeleite" target="_blank" rel="noopener noreferrer">Contacto</a> </li>
         </ul>
     </nav>
 
@@ -53,7 +53,7 @@
         Por defecto no tiene la clase "open", así que está oculto.
     -->
     <ul class="nav-menu" id="nav-menu">
-        <li class="nav-menu__item"><a class="nav-menu__link" href="#contacto">Contacto</a></li>
+        <li class="nav-menu__item"><a class="nav-menu__link" href="https://www.instagram.com/cubanitosdeleite" target="_blank" rel="noopener noreferrer">Contacto</a></li>
         <li class="nav-menu__item"><a class="nav-menu__link" href="#about">Acerca de</a></li>
         <li class="nav-menu__item"><a class="nav-menu__link" href="#mision">Misión y Visión</a></li>
     </ul>
@@ -67,48 +67,58 @@
         </section>
         <section class="productos" id="productos">
             <h3 class="productos__title">Descubrí nuestros productos</h3>
-            <div class="carrusel">
-                <div class="product-card product-card--cubanitos-comunes">
-                    <img class="product-card__img" src="assets/images/cubanitos-comunes.webp" alt="Cubanitos comunes" title="Cubanitos comunes" loading="lazy">
-                    <h4 class="product-card__h4">Comunes</h4>
-                </div>
-                <div class="product-card product-card--cubanitos-bañados-negros">
-                    <img class="product-card__img" src="assets/images/cubanitos-banados-negros.webp" alt="Cubanitos bañados negros" title="Cubanitos bañados negros" loading="lazy">
-                    <h4 class="product-card__h4">Bañados negros</h4>
-                </div>
-                <div class="product-card product-card--cubanitos-bañados-blancos">
-                    <img class="product-card__img" src="assets/images/cubanitos-banados-blancos.webp" alt="Cubanitos bañados blancos" title="Cubanitos bañados blancos" loading="lazy">
-                    <h4 class="product-card__h4">Bañados blancos</h4>
-                </div>
-                <div class="product-card product-card--cubanitos-bañados-negros-con-almendras">
-                    <img class="product-card__img" src="assets/images/cubanitos-banados-negros-con-almendras.webp" alt="Cubanitos bañados negros con almendras" title="Cubanitos bañados negros con almendras" loading="lazy">
-                    <h4 class="product-card__h4">Bañados negros con almendras</h4>
-                </div>
-                <div class="product-card product-card--cubanitos-bañados-blancos-con-almendras">
-                    <img class="product-card__img" src="assets/images/cubanitos-banados-blancos-con-almendras.webp" alt="Cubanitos bañados blancos con almendras" title="Cubanitos bañados blancos con almendras" loading="lazy">
-                    <h4 class="product-card__h4">Bañados blancos con almendras</h4>
-                </div>
-                <div class="product-card product-card--cubanitos-bañados-blancos-con-avellanas">
-                    <img class="product-card__img" src="assets/images/cubanitos-banados-blancos-con-avellana.webp" alt="Cubanitos bañados blancos con avellana" title="Cubanitos bañados blancos con avellana" loading="lazy">
-                    <h4 class="product-card__h4">Bañados blancos con avellana</h4>
-                </div>
-                <div class="product-card product-card--cubanitos-bañados-negros-con-coco">
-                    <img class="product-card__img" src="assets/images/cubanitos-banados-negros-con-coco.webp" alt="Cubanitos bañados negros con coco" title="Cubanitos bañados negros con coco" loading="lazy">
-                    <h4 class="product-card__h4">Bañados negros con coco</h4>
-                </div>
-                <div class="product-card product-card--cubanitos-bañados-blancos-con-coco">
-                    <img class="product-card__img" src="assets/images/cubanitos-banados-blancos-con-coco.webp" alt="Cubanitos bañados blancos con coco" title="Cubanitos bañados blancos con coco" loading="lazy">
-                    <h4 class="product-card__h4">Bañados blancos con coco</h4>
-                </div>
-                <div class="product-card product-card--cubanitos-helados">
-                    <img class="product-card__img" src="assets/images/cubanitos-helados.webp" alt="Cubanitos helados" title="Cubanitos helados" loading="lazy">
-                    <h4 class="product-card__h4 cubanitos-helados_h4">Helados</h4>
-                </div>
-                <div class="product-card product-card--cubanitos-rellenos-crema-moka">
-                    <img class="product-card__img" src="assets/images/cubanitos-rellenos-crema-moka.webp" alt="Cubanitos rellenos con crema moka" title="Cubanitos rellenos con crema moka" loading="lazy">
-                    <h4 class="product-card__h4">Rellenos con crema moka</h4>
-                </div>
-            </div>
+            <div class="carrusel-wrapper">
+ 
+    <!-- Botón izquierda — oculto al inicio con la clase "hidden" -->
+    <button class="carrusel-btn carrusel-btn--izq hidden" aria-label="Anterior">&#8592;</button>
+ 
+    <div class="carrusel" id="carrusel">
+        <div class="product-card product-card--cubanitos-comunes">
+            <img class="product-card__img" src="assets/images/cubanitos-comunes.webp" alt="Cubanitos comunes" title="Cubanitos comunes" loading="lazy">
+            <h4 class="product-card__h4">Comunes</h4>
+        </div>
+        <div class="product-card product-card--cubanitos-bañados-negros">
+            <img class="product-card__img" src="assets/images/cubanitos-banados-negros.webp" alt="Cubanitos bañados negros" title="Cubanitos bañados negros" loading="lazy">
+            <h4 class="product-card__h4">Bañados negros</h4>
+        </div>
+        <div class="product-card product-card--cubanitos-bañados-blancos">
+            <img class="product-card__img" src="assets/images/cubanitos-banados-blancos.webp" alt="Cubanitos bañados blancos" title="Cubanitos bañados blancos" loading="lazy">
+            <h4 class="product-card__h4">Bañados blancos</h4>
+        </div>
+        <div class="product-card product-card--cubanitos-bañados-negros-con-almendras">
+            <img class="product-card__img" src="assets/images/cubanitos-banados-negros-con-almendras.webp" alt="Cubanitos bañados negros con almendras" title="Cubanitos bañados negros con almendras" loading="lazy">
+            <h4 class="product-card__h4">Bañados negros con almendras</h4>
+        </div>
+        <div class="product-card product-card--cubanitos-bañados-blancos-con-almendras">
+            <img class="product-card__img" src="assets/images/cubanitos-banados-blancos-con-almendras.webp" alt="Cubanitos bañados blancos con almendras" title="Cubanitos bañados blancos con almendras" loading="lazy">
+            <h4 class="product-card__h4">Bañados blancos con almendras</h4>
+        </div>
+        <div class="product-card product-card--cubanitos-bañados-blancos-con-avellanas">
+            <img class="product-card__img" src="assets/images/cubanitos-banados-blancos-con-avellana.webp" alt="Cubanitos bañados blancos con avellana" title="Cubanitos bañados blancos con avellana" loading="lazy">
+            <h4 class="product-card__h4">Bañados blancos con avellana</h4>
+        </div>
+        <div class="product-card product-card--cubanitos-bañados-negros-con-coco">
+            <img class="product-card__img" src="assets/images/cubanitos-banados-negros-con-coco.webp" alt="Cubanitos bañados negros con coco" title="Cubanitos bañados negros con coco" loading="lazy">
+            <h4 class="product-card__h4">Bañados negros con coco</h4>
+        </div>
+        <div class="product-card product-card--cubanitos-bañados-blancos-con-coco">
+            <img class="product-card__img" src="assets/images/cubanitos-banados-blancos-con-coco.webp" alt="Cubanitos bañados blancos con coco" title="Cubanitos bañados blancos con coco" loading="lazy">
+            <h4 class="product-card__h4">Bañados blancos con coco</h4>
+        </div>
+        <div class="product-card product-card--cubanitos-helados">
+            <img class="product-card__img" src="assets/images/cubanitos-helados.webp" alt="Cubanitos helados" title="Cubanitos helados" loading="lazy">
+            <h4 class="product-card__h4 cubanitos-helados_h4">Helados</h4>
+        </div>
+        <div class="product-card product-card--cubanitos-rellenos-crema-moka">
+            <img class="product-card__img" src="assets/images/cubanitos-rellenos-crema-moka.webp" alt="Cubanitos rellenos con crema moka" title="Cubanitos rellenos con crema moka" loading="lazy">
+            <h4 class="product-card__h4">Rellenos con crema moka</h4>
+        </div>
+    </div>
+ 
+    <!-- Botón derecha — visible al inicio -->
+    <button class="carrusel-btn carrusel-btn--der" aria-label="Siguiente">&#8594;</button>
+ 
+</div>
         </section>
         <section class="encargos">
             <div class="ramo">
@@ -122,7 +132,7 @@
         </section>
         <section class="about" id="about">
             <h3 class="about__title">Acerca de Cubanitos Deleite</h3>
-            <p class="about__p">Somos un emprendimiento familiar, que trabaja para la excelencia en nuestros productos y la mejor atención con nuestros clientes.</p>
+            <p class="about__p">Somos un emprendimiento familiar, que trabaja para la <strong>excelencia</strong> en nuestros productos y la mejor atención con nuestros clientes.</p>
             <h4 class="about__h4 about__h4--trofeo">Ganadores del 3er puesto en cubanitos comunes 2025</h4>
             <img class="about__img about__img--trofeo" src="assets/images/trofeo-cubanito-simple.webp" alt="Trofeo mejor cubanito simple" title="Mejor cubanito simple" loading="lazy">
             
@@ -130,7 +140,7 @@
                 <img class="about__img about__img--mision" src="assets/images/mision.webp" alt="Logo misión" loading="lazy">
                 <h4 class="about__h4 about__h4--mision" id="mision">Misión</h4>
             </div>
-            <p class="about__p about__p--mision">Endulzar momentos de las personas ofreciendo cubanitos artesanales de calidad,
+            <p class="about__p about__p--mision"><strong>Endulzar momentos</strong> de las personas ofreciendo cubanitos artesanales de calidad,
                 con relleno generoso, baño artesanal y una atención cercana que haga
                 sentir especial a cada cliente.</p>
 
@@ -138,7 +148,7 @@
                 <img class="about__img about__img--vision" src="assets/images/vision.webp" alt="Logo visión" loading="lazy">
                 <h4 class="about__h4 about__h4--vision">Visión</h4>
             </div>
-            <p class="about__p about__p--vision">Convertirnos en la marca de referente en <strong>Bahía Blanca</strong>
+            <p class="about__p about__p--vision">Convertirnos en la marca de <strong> referencia en Bahía Blanca</strong>
                 y la región, reconocida por la excelencia en nuestros productos, la
                 innovación en sabores y el compromiso con nuestros clientes.</p>
             
@@ -158,13 +168,23 @@
             </div>
             <p class="about__p about__p--ubi">Encontranos en <strong>Corenfeld y Panamá</strong>, sábados y domingos de 16:30hs hasta 20:00hs.</p>
         </section>
+
+        <!-- Instagram logo flotante -->
+        <a class="ig-float" href="https://www.instagram.com/cubanitosdeleite" target="_blank" rel="noopener noreferrer" aria-label="Seguinos en Instagram">
+        <!-- SVG oficial del logo de Instagram -->
+        <svg class="ig-float__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff">
+        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.014 7.052.072 5.197.157 3.355.673 2.014 2.014.673 3.355.157 5.197.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.085 1.855.601 3.697 1.942 5.038 1.341 1.341 3.183 1.857 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.855-.085 3.697-.601 5.038-1.942 1.341-1.341 1.857-3.183 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.085-1.855-.601-3.697-1.942-5.038C20.645.673 18.803.157 16.948.072 15.668.014 15.259 0 12 0z"/>
+        <path d="M12 5.838a6.162 6.162 0 1 0 0 12.324A6.162 6.162 0 0 0 12 5.838zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
+        <circle cx="18.406" cy="5.594" r="1.44"/>
+    </svg>
+</a>
     </main>
     <footer class="footer" id="contacto">
         <div class="footer__descrip">
             <ul class="footer__ul">
-                <li class="footer__item seguinos">Seguinos en</li>
-                <li class="footer__item instagram-logo"><a href="https://www.instagram.com/cubanitosdeleite" class="basil--instagram-outline" title="Instagram" target="_blank" rel="noopener noreferrer"></a></li>
-                <li class="footer__item contactanos">Contactanos por mensaje privado</li>
+                <li class="footer__item footer__item--seguinos">Seguinos en</li>
+                <li class="footer__item footer__item--instagram-logo"><a href="https://www.instagram.com/cubanitosdeleite" class="basil--instagram-outline" title="Instagram" target="_blank" rel="noopener noreferrer"></a></li>
+                <li class="footer__item footer__item--contactanos">Contactanos por mensaje privado</li>
             </ul>
         </div>
         <div class="footer__info">
