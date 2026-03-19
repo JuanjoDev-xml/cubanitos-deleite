@@ -375,6 +375,77 @@ h4{
     margin-right: 4px;
 }
 
+/* INSTAGRAM LOGO FLOTANTE */
+
+/* ── Botón flotante de Instagram ── */
+.ig-float {
+    position: fixed;        /* Siempre visible, fijo en la pantalla */
+    bottom: 20px;
+    right: 20px;
+    z-index: 200;           /* Por encima de todo, incluso del header */
+
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+
+    /* Degradado oficial de Instagram */
+    background: radial-gradient(circle at 30% 110%, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    /* Sin subrayado */
+    text-decoration: none;
+}
+
+/* ── Ícono SVG dentro del botón ── */
+.ig-float__icon {
+    width: 28px;
+    height: 28px;
+}
+
+/* ── Animación de rebote al hacer hover ── */
+.ig-float:hover {
+    /*
+        La animación "rebote" se define abajo con @keyframes.
+        0.5s es la duración, ease-in-out es la curva de velocidad.
+    */
+    animation: rebote 0.5s ease-in-out;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+/*
+    @keyframes define los pasos de la animación.
+    0%   → posición original
+    30%  → sube 10px
+    60%  → baja un poco (efecto de rebote real)
+    100% → vuelve al lugar
+*/
+@keyframes rebote {
+    0%   { transform: translateY(0); }
+    30%  { transform: translateY(-10px); }
+    60%  { transform: translateY(-4px); }
+    100% { transform: translateY(0); }
+}
+
+/* ── Mobile: un poco más chico ── */
+@media (max-width: 480px) {
+    .ig-float {
+        width: 44px;
+        height: 44px;
+        bottom: 16px;
+        right: 16px;
+    }
+    .ig-float__icon {
+        width: 23px;
+        height: 23px;
+    }
+}
+
 /* FOOTER */
 
 /* FOOTER DESCRIP */
