@@ -554,60 +554,60 @@ h4{
 
 
 /* ── Menú desplegable ── */
-    .nav-menu {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
+.nav-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
 
         /*
             Se posiciona respecto al <header> (que tiene position:fixed).
             top: 100% significa "justo debajo del header".
         */
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
 
-        background: #F80097;
-        list-style: none;
-        padding: 0;
-        margin: 0;
+    background: #F80097;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 
         /* Por encima del resto del contenido de la página */
-        z-index: 999;
-    }
+    z-index: 999;
+}
 
     /*
         Cuando JS le agrega la clase "open",
         el menú se expande suavemente hasta 300px de alto.
         (El valor exacto no importa, solo que sea mayor a la altura real.)
     */
-    .nav-menu.open {
-        max-height: 300px;
-    }
+.nav-menu.open {
+    max-height: 300px;
+}
 
     /* ── Cada ítem de la lista ── */
-    .nav-menu__item {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    }
+.nav-menu__item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
 
-    .nav-menu__item:last-child {
-        border-bottom: none;
-    }
+.nav-menu__item:last-child {
+    border-bottom: none;
+}
 
     /* ── Los enlaces dentro del menú ── */
-    .nav-menu__link {
-        display: block;         /* Ocupa todo el ancho: más fácil de tocar en móvil */
-        padding: 14px 20px;
-        color: #fff;
-        text-decoration: none;
-        font-size: 1em;
-        transition: background 0.2s, padding-left 0.2s;
-    }
+.nav-menu__link {
+    display: block;         /* Ocupa todo el ancho: más fácil de tocar en móvil */
+    padding: 14px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background 0.2s, padding-left 0.2s;
+}
 
-    .nav-menu__link:hover {
-        background: rgba(255, 255, 255, 0.15);
-        padding-left: 28px;     /* Se corre un poco a la derecha al hacer hover */
-    }
+.nav-menu__link:hover {
+    background: rgba(255, 255, 255, 0.15);
+    padding-left: 28px;     /* Se corre un poco a la derecha al hacer hover */
+}
