@@ -204,84 +204,84 @@ h4{
 
 
 /* ── Contenedor relativo para poder posicionar los botones encima ── */
-    .carrusel-wrapper {
-        position: relative;     /* Los botones con position:absolute se ubican respecto a este div */
-        max-width: 800px;
-        margin: auto;
-    }
- 
+.carrusel-wrapper {
+    position: relative;     /* Los botones con position:absolute se ubican respecto a este div */
+    max-width: 800px;
+    margin: auto;
+}
+
     /* ── Scroll suave en el carrusel ── */
-    .carrusel {
-        scroll-behavior: smooth;    /* El desplazamiento al clickear botones será suave */
-        max-width: 100%;            /* En mobile ocupa todo el ancho disponible */
+.carrusel {
+    scroll-behavior: smooth;    /* El desplazamiento al clickear botones será suave */
+    max-width: 100%;            /* En mobile ocupa todo el ancho disponible */
 
         /*
             Ocultamos la barra de scroll nativa (queda feo en desktop).
             El scroll sigue funcionando igual con touch/trackpad.
         */
-        scrollbar-width: none;          /* Firefox */
-        -ms-overflow-style: none;       /* IE / Edge viejo */
-    }
-    .carrusel::-webkit-scrollbar {
-        display: none;                  /* Chrome, Safari */
-    }
+    scrollbar-width: none;          /* Firefox */
+    -ms-overflow-style: none;       /* IE / Edge viejo */
+}
+.carrusel::-webkit-scrollbar {
+    display: none;                  /* Chrome, Safari */
+}
 
     /* ── Estilos base de ambos botones ── */
-    .carrusel-btn {
-        position: absolute;     /* Flotan sobre el carrusel */
-        top: 50%;               /* Centrados verticalmente */
-        transform: translateY(-50%);    /* Ajuste fino: sin esto quedarían corridos hacia abajo */
-        background: #F80097;
-        color: #fff;
-        border: none;
-        border-radius: 50%;     /* Forma circular */
-        width: 36px;
-        height: 36px;
-        font-size: 1.1rem;
-        cursor: pointer;
-        z-index: 10;            /* Por encima de las cards */
-        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+.carrusel-btn {
+    position: absolute;     /* Flotan sobre el carrusel */
+    top: 50%;               /* Centrados verticalmente */
+    transform: translateY(-50%);    /* Ajuste fino: sin esto quedarían corridos hacia abajo */
+    background: #F80097;
+    color: #fff;
+    border: none;
+    border-radius: 50%;     /* Forma circular */
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    z-index: 10;            /* Por encima de las cards */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 
-        /* Transición para el fade de aparición/desaparición */
-        opacity: 1;
-        transition: opacity 0.3s ease, background 0.2s;
-    }
+    /* Transición para el fade de aparición/desaparición */
+    opacity: 1;
+    transition: opacity 0.3s ease, background 0.2s;
+}
 
-    .carrusel-btn:hover {
-        background: #c8007a;
-    }
+.carrusel-btn:hover {
+    background: #c8007a;
+}
 
-    /* ── Posición de cada botón ── */
-    .carrusel-btn--izq {
-        left: -18px;    /* La mitad del botón (36px/2) queda fuera del carrusel */
-    }
-    .carrusel-btn--der {
-        right: -18px;
-    }
+/* ── Posición de cada botón ── */
+.carrusel-btn--izq {
+    left: -18px;    /* La mitad del botón (36px/2) queda fuera del carrusel */
+}
+.carrusel-btn--der {
+    right: -18px;
+}
 
     /*
         La clase "hidden" hace el botón invisible e inaprensible.
         opacity:0  →  se ve transparente (permite animar con transition)
         pointer-events:none  →  aunque sea invisible, no se puede clickear
     */
-    .carrusel-btn.hidden {
-        opacity: 0;
-        pointer-events: none;
-    }
+.carrusel-btn.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
 
     /* ══ MOBILE FIRST ══
         En pantallas chicas los botones se achican
         y se acercan más al borde del carrusel.
     */
-    @media (max-width: 480px) {
-        .carrusel-btn {
-            width: 28px;
-            height: 28px;
-            font-size: 0.9rem;
-        }
-        .carrusel-btn--izq { left: 4px; }
-        .carrusel-btn--der { right: 4px; }
+@media (max-width: 480px) {
+    .carrusel-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
     }
+    .carrusel-btn--izq { left: 4px; }
+    .carrusel-btn--der { right: 4px; }
+}
 
 /* ENCARGOS */
 
