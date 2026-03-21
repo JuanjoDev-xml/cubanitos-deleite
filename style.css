@@ -532,10 +532,6 @@ h4{
     overflow: hidden;
     transition: max-height 0.3s ease;
 
-        /*
-            Se posiciona respecto al <header> (que tiene position:fixed).
-            top: 100% significa "justo debajo del header".
-        */
     position: absolute;
     top: 100%;
     left: 0;
@@ -548,20 +544,14 @@ h4{
 
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 
-        /* Por encima del resto del contenido de la página */
     z-index: 999;
 }
 
-    /*
-        Cuando JS le agrega la clase "open",
-        el menú se expande suavemente hasta 300px de alto.
-        (El valor exacto no importa, solo que sea mayor a la altura real.)
-    */
+
 .nav-menu.open {
     max-height: 300px;
 }
 
-    /* ── Cada ítem de la lista ── */
 .nav-menu__item {
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
@@ -570,9 +560,8 @@ h4{
     border-bottom: none;
 }
 
-    /* ── Los enlaces dentro del menú ── */
 .nav-menu__link {
-    display: block;         /* Ocupa todo el ancho: más fácil de tocar en móvil */
+    display: block;
     padding: 14px 20px;
     color: #fff;
     text-decoration: none;
@@ -582,5 +571,5 @@ h4{
 
 .nav-menu__link:hover {
     background: rgba(255, 255, 255, 0.15);
-    padding-left: 28px;     /* Se corre un poco a la derecha al hacer hover */
+    padding-left: 28px;
 }
