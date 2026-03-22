@@ -203,85 +203,72 @@ h4{
 
 
 
-/* ── Contenedor relativo para poder posicionar los botones encima ── */
-    .carrusel-wrapper {
-        position: relative;     /* Los botones con position:absolute se ubican respecto a este div */
-        max-width: 800px;
-        margin: auto;
-    }
- 
-    /* ── Scroll suave en el carrusel ── */
-    .carrusel {
-        scroll-behavior: smooth;    /* El desplazamiento al clickear botones será suave */
-        max-width: 100%;            /* En mobile ocupa todo el ancho disponible */
 
-        /*
-            Ocultamos la barra de scroll nativa (queda feo en desktop).
-            El scroll sigue funcionando igual con touch/trackpad.
-        */
-        scrollbar-width: none;          /* Firefox */
-        -ms-overflow-style: none;       /* IE / Edge viejo */
-    }
-    .carrusel::-webkit-scrollbar {
-        display: none;                  /* Chrome, Safari */
-    }
+.carrusel-wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: auto;
+}
 
-    /* ── Estilos base de ambos botones ── */
+
+.carrusel {
+    scroll-behavior: smooth;    
+    max-width: 100%;            
+
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.carrusel::-webkit-scrollbar {
+    display: none;
+}
+
+
+.carrusel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #F80097;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+
+    opacity: 1;
+    transition: opacity 0.3s ease, background 0.2s;
+}
+
+.carrusel-btn:hover {
+    background: #c8007a;
+}
+
+.carrusel-btn--izq {
+    left: -18px;
+}
+.carrusel-btn--der {
+    right: -18px;
+}
+
+.carrusel-btn.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+@media (max-width: 480px) {
     .carrusel-btn {
-        position: absolute;     /* Flotan sobre el carrusel */
-        top: 50%;               /* Centrados verticalmente */
-        transform: translateY(-50%);    /* Ajuste fino: sin esto quedarían corridos hacia abajo */
-        background: #F80097;
-        color: #fff;
-        border: none;
-        border-radius: 50%;     /* Forma circular */
-        width: 36px;
-        height: 36px;
-        font-size: 1.1rem;
-        cursor: pointer;
-        z-index: 10;            /* Por encima de las cards */
-        box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-
-        /* Transición para el fade de aparición/desaparición */
-        opacity: 1;
-        transition: opacity 0.3s ease, background 0.2s;
+        width: 28px;
+        height: 28px;
+        font-size: 0.9rem;
     }
-
-    .carrusel-btn:hover {
-        background: #c8007a;
-    }
-
-    /* ── Posición de cada botón ── */
-    .carrusel-btn--izq {
-        left: -18px;    /* La mitad del botón (36px/2) queda fuera del carrusel */
-    }
-    .carrusel-btn--der {
-        right: -18px;
-    }
-
-    /*
-        La clase "hidden" hace el botón invisible e inaprensible.
-        opacity:0  →  se ve transparente (permite animar con transition)
-        pointer-events:none  →  aunque sea invisible, no se puede clickear
-    */
-    .carrusel-btn.hidden {
-        opacity: 0;
-        pointer-events: none;
-    }
-
-    /* ══ MOBILE FIRST ══
-        En pantallas chicas los botones se achican
-        y se acercan más al borde del carrusel.
-    */
-    @media (max-width: 480px) {
-        .carrusel-btn {
-            width: 28px;
-            height: 28px;
-            font-size: 0.9rem;
-        }
-        .carrusel-btn--izq { left: 4px; }
-        .carrusel-btn--der { right: 4px; }
-    }
+    .carrusel-btn--izq { left: 4px; }
+    .carrusel-btn--der { right: 4px; }
+}
 
 /* ENCARGOS */
 
@@ -377,12 +364,11 @@ h4{
 
 /* INSTAGRAM LOGO FLOTANTE */
 
-/* ── Botón flotante de Instagram ── */
 .ig-float {
-    position: fixed;        /* Siempre visible, fijo en la pantalla */
+    position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 200;           /* Por encima de todo, incluso del header */
+    z-index: 200;
 
     width: 52px;
     height: 52px;
@@ -398,33 +384,20 @@ h4{
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-    /* Sin subrayado */
     text-decoration: none;
 }
 
-/* ── Ícono SVG dentro del botón ── */
 .ig-float__icon {
     width: 28px;
     height: 28px;
 }
 
-/* ── Animación de rebote al hacer hover ── */
+
 .ig-float:hover {
-    /*
-        La animación "rebote" se define abajo con @keyframes.
-        0.5s es la duración, ease-in-out es la curva de velocidad.
-    */
+    
     animation: rebote 0.5s ease-in-out;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
-
-/*
-    @keyframes define los pasos de la animación.
-    0%   → posición original
-    30%  → sube 10px
-    60%  → baja un poco (efecto de rebote real)
-    100% → vuelve al lugar
-*/
 @keyframes rebote {
     0%   { transform: translateY(0); }
     30%  { transform: translateY(-10px); }
@@ -432,7 +405,7 @@ h4{
     100% { transform: translateY(0); }
 }
 
-/* ── Mobile: un poco más chico ── */
+
 @media (max-width: 480px) {
     .ig-float {
         width: 44px;
@@ -554,60 +527,49 @@ h4{
 
 
 /* ── Menú desplegable ── */
-    .nav-menu {
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
+.nav-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
 
-        /*
-            Se posiciona respecto al <header> (que tiene position:fixed).
-            top: 100% significa "justo debajo del header".
-        */
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
 
-        background: #F80097;
-        list-style: none;
-        padding: 0;
-        margin: 0;
+    background: #F80097;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 
-        /* Por encima del resto del contenido de la página */
-        z-index: 999;
-    }
+    z-index: 999;
+}
 
-    /*
-        Cuando JS le agrega la clase "open",
-        el menú se expande suavemente hasta 300px de alto.
-        (El valor exacto no importa, solo que sea mayor a la altura real.)
-    */
-    .nav-menu.open {
-        max-height: 300px;
-    }
 
-    /* ── Cada ítem de la lista ── */
-    .nav-menu__item {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-    }
+.nav-menu.open {
+    max-height: 300px;
+}
 
-    .nav-menu__item:last-child {
-        border-bottom: none;
-    }
+.nav-menu__item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
 
-    /* ── Los enlaces dentro del menú ── */
-    .nav-menu__link {
-        display: block;         /* Ocupa todo el ancho: más fácil de tocar en móvil */
-        padding: 14px 20px;
-        color: #fff;
-        text-decoration: none;
-        font-size: 1em;
-        transition: background 0.2s, padding-left 0.2s;
-    }
+.nav-menu__item:last-child {
+    border-bottom: none;
+}
 
-    .nav-menu__link:hover {
-        background: rgba(255, 255, 255, 0.15);
-        padding-left: 28px;     /* Se corre un poco a la derecha al hacer hover */
-    }
+.nav-menu__link {
+    display: block;
+    padding: 14px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background 0.2s, padding-left 0.2s;
+}
+
+.nav-menu__link:hover {
+    background: rgba(255, 255, 255, 0.15);
+    padding-left: 28px;
+}

@@ -28,10 +28,6 @@
     <header class="header">
     <nav class="nav">
         <div class="nav__left">
-            <!--
-                Sin cambios en el botón, queda igual que lo tuyo.
-                Solo agregamos aria-expanded="false" para accesibilidad.
-            -->
             <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
                 <span class="mynaui--menu"></span>
             </button>
@@ -46,12 +42,6 @@
             <li class="nav__li"> <a class="nav__link a-contacto" href="https://www.instagram.com/cubanitosdeleite" target="_blank" rel="noopener noreferrer">Contacto</a> </li>
         </ul>
     </nav>
-
-    <!--
-        El menú desplegable vive DENTRO del <header>
-        para que se posicione justo debajo de él.
-        Por defecto no tiene la clase "open", así que está oculto.
-    -->
     <ul class="nav-menu" id="nav-menu">
         <li class="nav-menu__item"><a class="nav-menu__link" href="https://www.instagram.com/cubanitosdeleite" target="_blank" rel="noopener noreferrer">Contacto</a></li>
         <li class="nav-menu__item"><a class="nav-menu__link" href="#about">Acerca de</a></li>
@@ -68,57 +58,51 @@
         <section class="productos" id="productos">
             <h3 class="productos__title">Descubrí nuestros productos</h3>
             <div class="carrusel-wrapper">
- 
-    <!-- Botón izquierda — oculto al inicio con la clase "hidden" -->
-    <button class="carrusel-btn carrusel-btn--izq hidden" aria-label="Anterior">&#8592;</button>
- 
-    <div class="carrusel" id="carrusel">
-        <div class="product-card product-card--cubanitos-comunes">
-            <img class="product-card__img" src="assets/images/cubanitos-comunes.webp" alt="Cubanitos comunes" title="Cubanitos comunes" loading="lazy">
-            <h4 class="product-card__h4">Comunes</h4>
-        </div>
-        <div class="product-card product-card--cubanitos-bañados-negros">
-            <img class="product-card__img" src="assets/images/cubanitos-banados-negros.webp" alt="Cubanitos bañados negros" title="Cubanitos bañados negros" loading="lazy">
-            <h4 class="product-card__h4">Bañados negros</h4>
-        </div>
-        <div class="product-card product-card--cubanitos-bañados-blancos">
-            <img class="product-card__img" src="assets/images/cubanitos-banados-blancos.webp" alt="Cubanitos bañados blancos" title="Cubanitos bañados blancos" loading="lazy">
-            <h4 class="product-card__h4">Bañados blancos</h4>
-        </div>
-        <div class="product-card product-card--cubanitos-bañados-negros-con-almendras">
-            <img class="product-card__img" src="assets/images/cubanitos-banados-negros-con-almendras.webp" alt="Cubanitos bañados negros con almendras" title="Cubanitos bañados negros con almendras" loading="lazy">
-            <h4 class="product-card__h4">Bañados negros con almendras</h4>
-        </div>
-        <div class="product-card product-card--cubanitos-bañados-blancos-con-almendras">
-            <img class="product-card__img" src="assets/images/cubanitos-banados-blancos-con-almendras.webp" alt="Cubanitos bañados blancos con almendras" title="Cubanitos bañados blancos con almendras" loading="lazy">
-            <h4 class="product-card__h4">Bañados blancos con almendras</h4>
-        </div>
-        <div class="product-card product-card--cubanitos-bañados-blancos-con-avellanas">
-            <img class="product-card__img" src="assets/images/cubanitos-banados-blancos-con-avellana.webp" alt="Cubanitos bañados blancos con avellana" title="Cubanitos bañados blancos con avellana" loading="lazy">
-            <h4 class="product-card__h4">Bañados blancos con avellana</h4>
-        </div>
-        <div class="product-card product-card--cubanitos-bañados-negros-con-coco">
-            <img class="product-card__img" src="assets/images/cubanitos-banados-negros-con-coco.webp" alt="Cubanitos bañados negros con coco" title="Cubanitos bañados negros con coco" loading="lazy">
-            <h4 class="product-card__h4">Bañados negros con coco</h4>
-        </div>
-        <div class="product-card product-card--cubanitos-bañados-blancos-con-coco">
-            <img class="product-card__img" src="assets/images/cubanitos-banados-blancos-con-coco.webp" alt="Cubanitos bañados blancos con coco" title="Cubanitos bañados blancos con coco" loading="lazy">
-            <h4 class="product-card__h4">Bañados blancos con coco</h4>
-        </div>
-        <div class="product-card product-card--cubanitos-helados">
-            <img class="product-card__img" src="assets/images/cubanitos-helados.webp" alt="Cubanitos helados" title="Cubanitos helados" loading="lazy">
-            <h4 class="product-card__h4 cubanitos-helados_h4">Helados</h4>
-        </div>
-        <div class="product-card product-card--cubanitos-rellenos-crema-moka">
-            <img class="product-card__img" src="assets/images/cubanitos-rellenos-crema-moka.webp" alt="Cubanitos rellenos con crema moka" title="Cubanitos rellenos con crema moka" loading="lazy">
-            <h4 class="product-card__h4">Rellenos con crema moka</h4>
-        </div>
-    </div>
- 
-    <!-- Botón derecha — visible al inicio -->
-    <button class="carrusel-btn carrusel-btn--der" aria-label="Siguiente">&#8594;</button>
- 
-</div>
+                <button class="carrusel-btn carrusel-btn--izq hidden" aria-label="Anterior">&#8592;</button>
+                    <div class="carrusel" id="carrusel">
+                        <div class="product-card product-card--cubanitos-comunes">
+                            <img class="product-card__img" src="assets/images/cubanitos-comunes.webp" alt="Cubanitos comunes" title="Cubanitos comunes" loading="lazy">
+                            <h4 class="product-card__h4">Comunes</h4>
+                        </div>
+                        <div class="product-card product-card--cubanitos-bañados-negros">
+                            <img class="product-card__img" src="assets/images/cubanitos-banados-negros.webp" alt="Cubanitos bañados negros" title="Cubanitos bañados negros" loading="lazy">
+                            <h4 class="product-card__h4">Bañados negros</h4>
+                        </div>
+                        <div class="product-card product-card--cubanitos-bañados-blancos">
+                            <img class="product-card__img" src="assets/images/cubanitos-banados-blancos.webp" alt="Cubanitos bañados blancos" title="Cubanitos bañados blancos" loading="lazy">
+                            <h4 class="product-card__h4">Bañados blancos</h4>
+                        </div>
+                        <div class="product-card product-card--cubanitos-bañados-negros-con-almendras">
+                            <img class="product-card__img" src="assets/images/cubanitos-banados-negros-con-almendras.webp" alt="Cubanitos bañados negros con almendras" title="Cubanitos bañados negros con almendras" loading="lazy">
+                            <h4 class="product-card__h4">Bañados negros con almendras</h4>
+                        </div>
+                        <div class="product-card product-card--cubanitos-bañados-blancos-con-almendras">
+                            <img class="product-card__img" src="assets/images/cubanitos-banados-blancos-con-almendras.webp" alt="Cubanitos bañados blancos con almendras" title="Cubanitos bañados blancos con almendras" loading="lazy">
+                            <h4 class="product-card__h4">Bañados blancos con almendras</h4>
+                        </div>
+                        <div class="product-card product-card--cubanitos-bañados-blancos-con-avellanas">
+                            <img class="product-card__img" src="assets/images/cubanitos-banados-blancos-con-avellana.webp" alt="Cubanitos bañados blancos con avellana" title="Cubanitos bañados blancos con avellana" loading="lazy">
+                            <h4 class="product-card__h4">Bañados blancos con avellana</h4>
+                        </div>
+                        <div class="product-card product-card--cubanitos-bañados-negros-con-coco">
+                            <img class="product-card__img" src="assets/images/cubanitos-banados-negros-con-coco.webp" alt="Cubanitos bañados negros con coco" title="Cubanitos bañados negros con coco" loading="lazy">
+                            <h4 class="product-card__h4">Bañados negros con coco</h4>
+                        </div>
+                        <div class="product-card product-card--cubanitos-bañados-blancos-con-coco">
+                            <img class="product-card__img" src="assets/images/cubanitos-banados-blancos-con-coco.webp" alt="Cubanitos bañados blancos con coco" title="Cubanitos bañados blancos con coco" loading="lazy">
+                            <h4 class="product-card__h4">Bañados blancos con coco</h4>
+                        </div>
+                        <div class="product-card product-card--cubanitos-helados">
+                            <img class="product-card__img" src="assets/images/cubanitos-helados.webp" alt="Cubanitos helados" title="Cubanitos helados" loading="lazy">
+                            <h4 class="product-card__h4 cubanitos-helados_h4">Helados</h4>
+                        </div>
+                        <div class="product-card product-card--cubanitos-rellenos-crema-moka">
+                            <img class="product-card__img" src="assets/images/cubanitos-rellenos-crema-moka.webp" alt="Cubanitos rellenos con crema moka" title="Cubanitos rellenos con crema moka" loading="lazy">
+                            <h4 class="product-card__h4">Rellenos con crema moka</h4>
+                        </div>
+                    </div>
+                <button class="carrusel-btn carrusel-btn--der" aria-label="Siguiente">&#8594;</button>
+            </div>
         </section>
         <section class="encargos">
             <div class="ramo">
