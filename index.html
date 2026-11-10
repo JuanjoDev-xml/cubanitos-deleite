@@ -2,14 +2,16 @@
 <html lang="es">
 <head>
     <!-- Developer: https://github.com/JuanjoDev-xml -->
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
+    <meta name="theme-color" content="#F80097">
+    <script>document.documentElement.classList.add('js');</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,500;1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="assets/images/logo.ico" type="image/ico"/>
     <meta property="og:title" content="Cubanitos Deleite">
     <meta property="og:image" content="https://instagram.fbhi1-1.fna.fbcdn.net/v/t51.2885-19/448134564_1495597377697166_3587645411786035462_n.jpg?stp=dst-jpg_s150x150_tt6&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLmRqYW5nby41MDAuYzIifQ&_nc_ht=instagram.fbhi1-1.fna.fbcdn.net&_nc_cat=102&_nc_oc=Q6cZ2QGnBfPgx38vhgsU0jg71P5LnbsUCTsJXMZlJcaX0JI71_QEb0ji-8qWCZtTFq_oppC1sELAGbwIjpOYnZBZiFIV&_nc_ohc=jR5jbwPVRM4Q7kNvwHemUSP&_nc_gid=SaB275Vsph-Rq9be-fAnvA&edm=APoiHPcBAAAA&ccb=7-5&oh=00_AfssGFHTy1tSRbAMyDvidypHIIwnFF72RjXuyEj9-AzU4w&oe=698DD8DB&_nc_sid=22de04">
@@ -25,159 +27,516 @@
 </head>
 <body>
     <!-- Developer: https://github.com/JuanjoDev-xml -->
+
+    <!-- Íconos reutilizables -->
+    <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <symbol id="i-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/>
+            <circle cx="12" cy="12" r="4.2"/>
+            <path d="M17.6 6.4h.01"/>
+        </symbol>
+        <symbol id="i-flecha" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14M13 6l6 6-6 6"/>
+        </symbol>
+        <symbol id="i-flecha-izq" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 12H5M11 6l-6 6 6 6"/>
+        </symbol>
+        <symbol id="i-cerrar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 6 6 18M6 6l12 12"/>
+        </symbol>
+        <symbol id="i-ampliar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+        </symbol>
+        <symbol id="i-mision" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9.5"/>
+            <circle cx="12" cy="12" r="5.5"/>
+            <circle cx="12" cy="12" r="1.5"/>
+        </symbol>
+        <symbol id="i-vision" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/>
+            <circle cx="12" cy="12" r="3"/>
+        </symbol>
+        <symbol id="i-valores" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 3h12l4 6-10 12.5L2 9z"/>
+            <path d="M2 9h20M11 3 8 9l4 12.5L16 9l-3-6"/>
+        </symbol>
+        <symbol id="i-calidad" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8.5" r="6"/>
+            <path d="M8.2 13.4 7 22l5-3 5 3-1.2-8.6"/>
+        </symbol>
+        <symbol id="i-generoso" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2.7l5.66 5.66a8 8 0 1 1-11.32 0z"/>
+        </symbol>
+        <symbol id="i-corazon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21.3l7.8-7.8 1-1.1a5.5 5.5 0 0 0 0-7.8z"/>
+        </symbol>
+        <symbol id="i-ubicacion" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.5 10c0 6.5-8.5 12.5-8.5 12.5S3.500 16.500 3.500 10a8.500 8.500 0 0 1 17 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+        </symbol>
+        <symbol id="i-reloj" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9.500"/>
+            <path d="M12 6.500V12l3.500 2"/>
+        </symbol>
+        <symbol id="i-trofeo" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 9H4.500a2.500 2.500 0 0 1 0-5H6M18 9h1.500a2.500 2.500 0 0 0 0-5H18M4 22h16"/>
+            <path d="M10 14.660V17c0 .550-.470.980-.970 1.210C7.850 18.750 7 20.240 7 22M14 14.660V17c0 .550.470.980.970 1.210C16.150 18.750 17 20.240 17 22"/>
+            <path d="M18 2H6v7a6 6 0 0 0 12 0z"/>
+        </symbol>
+        <symbol id="i-llegar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 11 22 2l-9 19-2-8z"/>
+        </symbol>
+        <symbol id="i-github" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2A10 10 0 0 0 2 12c0 4.420 2.870 8.170 6.840 9.500.500.080.660-.230.660-.500v-1.690c-2.770.600-3.360-1.340-3.360-1.340-.460-1.160-1.110-1.470-1.110-1.470-.910-.620.070-.600.070-.600 1 .070 1.530 1.030 1.530 1.030.870 1.520 2.340 1.070 2.910.830.090-.650.350-1.090.630-1.340-2.220-.250-4.550-1.110-4.550-4.920 0-1.110.380-2 1.030-2.710-.100-.250-.450-1.290.100-2.640 0 0 .840-.270 2.750 1.020.790-.220 1.650-.330 2.500-.330s1.710.110 2.500.330c1.910-1.290 2.750-1.020 2.750-1.020.550 1.350.200 2.390.100 2.640.650.710 1.030 1.600 1.030 2.710 0 3.820-2.340 4.660-4.570 4.910.360.310.690.920.690 1.850V21c0 .270.160.590.670.500C19.140 20.160 22 16.420 22 12A10 10 0 0 0 12 2"/>
+        </symbol>
+    </svg>
+
+    <a class="saltar" href="#productos">Saltar al contenido</a>
+
     <header class="header">
-    <nav class="nav">
-        <div class="nav__left">
-            <button class="menu-toggle" aria-label="Menu" aria-expanded="false">
-                <span class="mynaui--menu"></span>
+        <nav class="nav contenedor" aria-label="Principal">
+            <a class="logo__a" href="#inicio" aria-label="Cubanitos Deleite, ir al inicio">
+                <img class="logo__img" src="assets/images/logo.webp" alt="Cubanitos Deleite" width="1154" height="520">
+            </a>
+            <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-menu">
+                <span class="menu-toggle__barra"></span>
+                <span class="menu-toggle__barra"></span>
+                <span class="menu-toggle__barra"></span>
             </button>
-            <span class="logo">
-                <a class="logo__a" href="#">
-                    <img class="logo__img" src="assets/images/logo.webp" alt="Cubanitos Deleite">
-                </a>
-            </span>
-        </div>
-        <ul class="nav__ul">
-            <li class="nav__li"> <a class="nav__link a-productos" href="#productos">Productos</a> </li>
-            <li class="nav__li"> <a class="nav__link a-contacto" href="https://www.instagram.com/cubanitosdeleite" target="_blank" rel="noopener noreferrer">Contacto</a> </li>
-        </ul>
-    </nav>
-    <ul class="nav-menu" id="nav-menu">
-        <li class="nav-menu__item"><a class="nav-menu__link" href="https://www.instagram.com/cubanitosdeleite" target="_blank" rel="noopener noreferrer">Contacto</a></li>
-        <li class="nav-menu__item"><a class="nav-menu__link" href="#about">Acerca de</a></li>
-        <li class="nav-menu__item"><a class="nav-menu__link" href="#mision">Misión y Visión</a></li>
-    </ul>
-</header>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-menu__item"><a class="nav-menu__link" href="#productos">Productos</a></li>
+                <li class="nav-menu__item"><a class="nav-menu__link" href="#encargos">Encargos</a></li>
+                <li class="nav-menu__item"><a class="nav-menu__link" href="#about">Acerca de</a></li>
+                <li class="nav-menu__item"><a class="nav-menu__link" href="#mision">Misión y Visión</a></li>
+                <li class="nav-menu__item"><a class="nav-menu__link" href="#ubicacion">Ubicación</a></li>
+                <li class="nav-menu__item nav-menu__item--cta">
+                    <a class="boton boton--primario boton--chico a-contacto" href="https://www.instagram.com/cubanitosdeleite" target="_blank" rel="noopener noreferrer">
+                        <svg class="icono"><use href="#i-instagram"/></svg>
+                        Contacto
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <span class="progreso" aria-hidden="true"></span>
+    </header>
+
     <main class="main">
-        <section class="hero">
-            <div class="hero__content">
-                <h1 class="hero__title">Cubanitos Deleite</h1>
-                <h2 class="hero__subtitle">Endulzando momentos</h2>
+
+        <!-- HERO -->
+        <section class="hero" id="inicio">
+            <div class="hero__deco" aria-hidden="true">
+                <span class="hero__mancha hero__mancha--1"></span>
+                <span class="hero__mancha hero__mancha--2"></span>
+                <span class="grana"></span><span class="grana"></span><span class="grana"></span>
+                <span class="grana"></span><span class="grana"></span><span class="grana"></span>
+                <span class="grana"></span><span class="grana"></span><span class="grana"></span>
+                <span class="grana"></span>
+            </div>
+            <div class="hero__inner contenedor">
+                <div class="hero__content">
+                    <p class="hero__eyebrow">Emprendimiento familiar · Bahía Blanca</p>
+                    <h1 class="hero__title">Cubanitos <span class="hero__title-acento">Deleite</span></h1>
+                    <p class="hero__subtitle">Endulzando momentos</p>
+                    <p class="hero__text">Cubanitos artesanales de calidad, con relleno generoso, baño artesanal y una atención cercana.</p>
+                    <div class="hero__acciones">
+                        <a class="boton boton--primario" href="#productos">
+                            Ver productos
+                            <svg class="icono"><use href="#i-flecha"/></svg>
+                        </a>
+                        <a class="boton boton--secundario" href="https://www.instagram.com/cubanitosdeleite" target="_blank" rel="noopener noreferrer">
+                            <svg class="icono"><use href="#i-instagram"/></svg>
+                            Pedí por Instagram
+                        </a>
+                    </div>
+                    <ul class="hero__datos">
+                        <li class="hero__dato">
+                            <svg class="icono"><use href="#i-ubicacion"/></svg>
+                            Corenfeld y Panamá
+                        </li>
+                        <li class="hero__dato">
+                            <svg class="icono"><use href="#i-reloj"/></svg>
+                            Sáb. y dom. · 16:30 a 20:00
+                        </li>
+                    </ul>
+                </div>
+                <div class="hero__visual">
+                    <span class="hero__arco" aria-hidden="true"></span>
+                    <div class="hero__foto">
+                        <img class="hero__img" src="assets/images/hero.webp" alt="Cubanitos bañados en chocolate con almendras servidos en un bowl" width="1532" height="1475" fetchpriority="high">
+                    </div>
+                    <svg class="hero__sello" viewBox="0 0 120 120" aria-hidden="true">
+                        <defs>
+                            <path id="sello-circulo" d="M60 60m-43 0a43 43 0 1 1 86 0a43 43 0 1 1-86 0"/>
+                        </defs>
+                        <circle class="hero__sello-fondo" cx="60" cy="60" r="59"/>
+                        <g class="hero__sello-giro">
+                            <text class="hero__sello-texto"><textPath href="#sello-circulo" textLength="262">ARTESANALES • ENDULZANDO MOMENTOS •</textPath></text>
+                        </g>
+                        <path class="hero__sello-corazon" d="M60 73.500l-9.800-9.700a6.600 6.600 0 0 1 9.300-9.300l.500.500.500-.500a6.600 6.600 0 0 1 9.300 9.300z"/>
+                    </svg>
+                    <a class="hero__premio" href="#about">
+                        <span class="hero__premio-icono"><svg class="icono"><use href="#i-trofeo"/></svg></span>
+                        <span class="hero__premio-texto"><strong>3er puesto</strong> Cubanitos comunes 2025</span>
+                    </a>
+                </div>
             </div>
         </section>
-        <section class="productos" id="productos">
-            <h3 class="productos__title">Descubrí nuestros productos</h3>
+
+        <!-- CINTA -->
+        <div class="cinta" aria-hidden="true">
+            <div class="cinta__pista">
+                <span class="cinta__grupo">
+                    <span>Artesanales</span><i>✦</i><span>Relleno generoso</span><i>✦</i><span>Baño artesanal</span><i>✦</i><span>Atención cálida</span><i>✦</i><span>Endulzando momentos</span><i>✦</i><span>Bahía Blanca</span><i>✦</i>
+                </span>
+                <span class="cinta__grupo">
+                    <span>Artesanales</span><i>✦</i><span>Relleno generoso</span><i>✦</i><span>Baño artesanal</span><i>✦</i><span>Atención cálida</span><i>✦</i><span>Endulzando momentos</span><i>✦</i><span>Bahía Blanca</span><i>✦</i>
+                </span>
+            </div>
+        </div>
+        <div class="chorreado" aria-hidden="true"></div>
+
+        <!-- PRODUCTOS -->
+        <section class="productos seccion" id="productos">
+            <div class="contenedor seccion__head" data-reveal>
+                <p class="seccion__eyebrow">Nuestras variedades</p>
+                <h2 class="seccion__title productos__title">Descubrí nuestros productos</h2>
+                <p class="seccion__bajada">Tocá cualquiera para verlo en grande.</p>
+            </div>
             <div class="carrusel-wrapper">
-                <button class="carrusel-btn carrusel-btn--izq hidden" aria-label="Anterior">&#8592;</button>
-                    <div class="carrusel" id="carrusel">
-                        <div class="product-card product-card--cubanitos-comunes">
-                            <img class="product-card__img" src="assets/images/cubanitos-comunes.webp" alt="Cubanitos comunes" title="Cubanitos comunes" loading="lazy">
-                            <h4 class="product-card__h4">Comunes</h4>
-                        </div>
-                        <div class="product-card product-card--cubanitos-bañados-negros">
-                            <img class="product-card__img" src="assets/images/cubanitos-banados-negros.webp" alt="Cubanitos bañados negros" title="Cubanitos bañados negros" loading="lazy">
-                            <h4 class="product-card__h4">Bañados negros</h4>
-                        </div>
-                        <div class="product-card product-card--cubanitos-bañados-blancos">
-                            <img class="product-card__img" src="assets/images/cubanitos-banados-blancos.webp" alt="Cubanitos bañados blancos" title="Cubanitos bañados blancos" loading="lazy">
-                            <h4 class="product-card__h4">Bañados blancos</h4>
-                        </div>
-                        <div class="product-card product-card--cubanitos-bañados-negros-con-almendras">
-                            <img class="product-card__img" src="assets/images/cubanitos-banados-negros-con-almendras.webp" alt="Cubanitos bañados negros con almendras" title="Cubanitos bañados negros con almendras" loading="lazy">
-                            <h4 class="product-card__h4">Bañados negros con almendras</h4>
-                        </div>
-                        <div class="product-card product-card--cubanitos-bañados-blancos-con-almendras">
-                            <img class="product-card__img" src="assets/images/cubanitos-banados-blancos-con-almendras.webp" alt="Cubanitos bañados blancos con almendras" title="Cubanitos bañados blancos con almendras" loading="lazy">
-                            <h4 class="product-card__h4">Bañados blancos con almendras</h4>
-                        </div>
-                        <div class="product-card product-card--cubanitos-bañados-blancos-con-avellanas">
-                            <img class="product-card__img" src="assets/images/cubanitos-banados-blancos-con-avellana.webp" alt="Cubanitos bañados blancos con avellana" title="Cubanitos bañados blancos con avellana" loading="lazy">
-                            <h4 class="product-card__h4">Bañados blancos con avellana</h4>
-                        </div>
-                        <div class="product-card product-card--cubanitos-bañados-negros-con-coco">
-                            <img class="product-card__img" src="assets/images/cubanitos-banados-negros-con-coco.webp" alt="Cubanitos bañados negros con coco" title="Cubanitos bañados negros con coco" loading="lazy">
-                            <h4 class="product-card__h4">Bañados negros con coco</h4>
-                        </div>
-                        <div class="product-card product-card--cubanitos-bañados-blancos-con-coco">
-                            <img class="product-card__img" src="assets/images/cubanitos-banados-blancos-con-coco.webp" alt="Cubanitos bañados blancos con coco" title="Cubanitos bañados blancos con coco" loading="lazy">
-                            <h4 class="product-card__h4">Bañados blancos con coco</h4>
-                        </div>
-                        <div class="product-card product-card--cubanitos-helados">
-                            <img class="product-card__img" src="assets/images/cubanitos-helados.webp" alt="Cubanitos helados" title="Cubanitos helados" loading="lazy">
-                            <h4 class="product-card__h4 cubanitos-helados_h4">Helados</h4>
-                        </div>
-                        <div class="product-card product-card--cubanitos-rellenos-crema-moka">
-                            <img class="product-card__img" src="assets/images/cubanitos-rellenos-crema-moka.webp" alt="Cubanitos rellenos con crema moka" title="Cubanitos rellenos con crema moka" loading="lazy">
-                            <h4 class="product-card__h4">Rellenos con crema moka</h4>
+                <button class="carrusel-btn carrusel-btn--izq hidden" aria-label="Anterior">
+                    <svg class="icono"><use href="#i-flecha-izq"/></svg>
+                </button>
+                <ul class="carrusel" id="carrusel">
+                    <li class="carrusel__item" data-reveal>
+                        <button class="product-card product-card--cubanitos-comunes" type="button">
+                            <span class="product-card__media"><img class="product-card__img" src="assets/images/cubanitos-comunes.webp" alt="Cubanitos comunes" loading="lazy" width="1536" height="2304"></span>
+                            <span class="product-card__h4">Comunes</span>
+                            <span class="product-card__zoom" aria-hidden="true"><svg class="icono"><use href="#i-ampliar"/></svg></span>
+                        </button>
+                    </li>
+                    <li class="carrusel__item" data-reveal>
+                        <button class="product-card product-card--cubanitos-bañados-negros" type="button">
+                            <span class="product-card__media"><img class="product-card__img" src="assets/images/cubanitos-banados-negros.webp" alt="Cubanitos bañados negros" loading="lazy" width="1536" height="2304"></span>
+                            <span class="product-card__h4">Bañados negros</span>
+                            <span class="product-card__zoom" aria-hidden="true"><svg class="icono"><use href="#i-ampliar"/></svg></span>
+                        </button>
+                    </li>
+                    <li class="carrusel__item" data-reveal>
+                        <button class="product-card product-card--cubanitos-bañados-blancos" type="button">
+                            <span class="product-card__media"><img class="product-card__img" src="assets/images/cubanitos-banados-blancos.webp" alt="Cubanitos bañados blancos" loading="lazy" width="1536" height="2304"></span>
+                            <span class="product-card__h4">Bañados blancos</span>
+                            <span class="product-card__zoom" aria-hidden="true"><svg class="icono"><use href="#i-ampliar"/></svg></span>
+                        </button>
+                    </li>
+                    <li class="carrusel__item" data-reveal>
+                        <button class="product-card product-card--cubanitos-bañados-negros-con-almendras" type="button">
+                            <span class="product-card__media"><img class="product-card__img" src="assets/images/cubanitos-banados-negros-con-almendras.webp" alt="Cubanitos bañados negros con almendras" loading="lazy" width="1536" height="2304"></span>
+                            <span class="product-card__h4">Bañados negros con almendras</span>
+                            <span class="product-card__zoom" aria-hidden="true"><svg class="icono"><use href="#i-ampliar"/></svg></span>
+                        </button>
+                    </li>
+                    <li class="carrusel__item" data-reveal>
+                        <button class="product-card product-card--cubanitos-bañados-blancos-con-almendras" type="button">
+                            <span class="product-card__media"><img class="product-card__img" src="assets/images/cubanitos-banados-blancos-con-almendras.webp" alt="Cubanitos bañados blancos con almendras" loading="lazy" width="1461" height="2098"></span>
+                            <span class="product-card__h4">Bañados blancos con almendras</span>
+                            <span class="product-card__zoom" aria-hidden="true"><svg class="icono"><use href="#i-ampliar"/></svg></span>
+                        </button>
+                    </li>
+                    <li class="carrusel__item" data-reveal>
+                        <button class="product-card product-card--cubanitos-bañados-blancos-con-avellanas" type="button">
+                            <span class="product-card__media"><img class="product-card__img" src="assets/images/cubanitos-banados-blancos-con-avellana.webp" alt="Cubanitos bañados blancos con avellana" loading="lazy" width="1536" height="2304"></span>
+                            <span class="product-card__h4">Bañados blancos con avellana</span>
+                            <span class="product-card__zoom" aria-hidden="true"><svg class="icono"><use href="#i-ampliar"/></svg></span>
+                        </button>
+                    </li>
+                    <li class="carrusel__item" data-reveal>
+                        <button class="product-card product-card--cubanitos-bañados-negros-con-coco" type="button">
+                            <span class="product-card__media"><img class="product-card__img" src="assets/images/cubanitos-banados-negros-con-coco.webp" alt="Cubanitos bañados negros con coco" loading="lazy" width="1536" height="2304"></span>
+                            <span class="product-card__h4">Bañados negros con coco</span>
+                            <span class="product-card__zoom" aria-hidden="true"><svg class="icono"><use href="#i-ampliar"/></svg></span>
+                        </button>
+                    </li>
+                    <li class="carrusel__item" data-reveal>
+                        <button class="product-card product-card--cubanitos-bañados-blancos-con-coco" type="button">
+                            <span class="product-card__media"><img class="product-card__img" src="assets/images/cubanitos-banados-blancos-con-coco.webp" alt="Cubanitos bañados blancos con coco" loading="lazy" width="1536" height="2304"></span>
+                            <span class="product-card__h4">Bañados blancos con coco</span>
+                            <span class="product-card__zoom" aria-hidden="true"><svg class="icono"><use href="#i-ampliar"/></svg></span>
+                        </button>
+                    </li>
+                    <li class="carrusel__item" data-reveal>
+                        <button class="product-card product-card--cubanitos-helados" type="button">
+                            <span class="product-card__media"><img class="product-card__img" src="assets/images/cubanitos-helados.webp" alt="Cubanitos helados" loading="lazy" width="1536" height="2304"></span>
+                            <span class="product-card__h4 cubanitos-helados_h4">Helados</span>
+                            <span class="product-card__zoom" aria-hidden="true"><svg class="icono"><use href="#i-ampliar"/></svg></span>
+                        </button>
+                    </li>
+                    <li class="carrusel__item" data-reveal>
+                        <button class="product-card product-card--cubanitos-rellenos-crema-moka" type="button">
+                            <span class="product-card__media"><img class="product-card__img" src="assets/images/cubanitos-rellenos-crema-moka.webp" alt="Cubanitos rellenos con crema moka" loading="lazy" width="1536" height="2304"></span>
+                            <span class="product-card__h4">Rellenos con crema moka</span>
+                            <span class="product-card__zoom" aria-hidden="true"><svg class="icono"><use href="#i-ampliar"/></svg></span>
+                        </button>
+                    </li>
+                </ul>
+                <button class="carrusel-btn carrusel-btn--der" aria-label="Siguiente">
+                    <svg class="icono"><use href="#i-flecha"/></svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- ENCARGOS -->
+        <section class="encargos seccion" id="encargos">
+            <div class="contenedor">
+                <div class="seccion__head" data-reveal>
+                    <p class="seccion__eyebrow">Para regalar</p>
+                    <h2 class="seccion__title">Encargá tu ramo o tu box</h2>
+                    <p class="seccion__bajada">Los armamos a pedido. Escribinos por Instagram y coordinamos.</p>
+                </div>
+                <div class="encargos__grid">
+                    <div class="encargos__col" data-reveal>
+                        <a class="encargo ramo" href="https://www.instagram.com/cubanitosdeleite" target="_blank" rel="noopener noreferrer" data-tilt>
+                            <img class="encargo__img ramo__img" src="assets/images/ramo-cubanitos.webp" alt="Ramo de cubanitos" loading="lazy" width="1536" height="2304">
+                            <div class="encargo__body">
+                                <h3 class="encargo__title ramo__h3">Encargá tu ramo de cubanitos</h3>
+                                <span class="encargo__link">
+                                    Pedilo por Instagram
+                                    <svg class="icono"><use href="#i-flecha"/></svg>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="encargos__col" data-reveal>
+                        <a class="encargo box" href="https://www.instagram.com/cubanitosdeleite" target="_blank" rel="noopener noreferrer" data-tilt>
+                            <img class="encargo__img box__img" src="assets/images/box-cubanitos.webp" alt="Box de cubanitos" loading="lazy" width="1536" height="2304">
+                            <div class="encargo__body">
+                                <h3 class="encargo__title box__h3">Encargá tu box de cubanitos</h3>
+                                <span class="encargo__link">
+                                    Pedilo por Instagram
+                                    <svg class="icono"><use href="#i-flecha"/></svg>
+                                </span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="about seccion" id="about">
+            <div class="contenedor">
+                <div class="about__intro">
+                    <figure class="about__trofeo" data-reveal>
+                        <img class="about__img about__img--trofeo" src="assets/images/trofeo-cubanito-simple.webp" alt="Trofeo al tercer puesto, mejor cubanito simple" loading="lazy" width="960" height="1280">
+                        <figcaption class="about__cinta">
+                            <svg class="icono"><use href="#i-trofeo"/></svg>
+                            3er puesto 2025
+                        </figcaption>
+                    </figure>
+                    <div class="about__texto" data-reveal>
+                        <p class="seccion__eyebrow">Quiénes somos</p>
+                        <h2 class="seccion__title about__title">Acerca de Cubanitos Deleite</h2>
+                        <p class="about__p">Somos un emprendimiento familiar, que trabaja para la <strong>excelencia</strong> en nuestros productos y la mejor atención con nuestros clientes.</p>
+                        <div class="premio">
+                            <span class="premio__icono"><svg class="icono"><use href="#i-trofeo"/></svg></span>
+                            <h3 class="premio__texto about__h4--trofeo">Ganadores del 3er puesto en cubanitos comunes 2025</h3>
                         </div>
                     </div>
-                <button class="carrusel-btn carrusel-btn--der" aria-label="Siguiente">&#8594;</button>
+                </div>
+
+                <div class="pilares" id="mision">
+                    <article class="pilar about__mision" data-reveal>
+                        <span class="pilar__icono"><svg class="icono"><use href="#i-mision"/></svg></span>
+                        <h3 class="pilar__title about__h4--mision">Misión</h3>
+                        <p class="pilar__p about__p--mision"><strong>Endulzar momentos</strong> de las personas ofreciendo cubanitos artesanales de calidad,
+                            con relleno generoso, baño artesanal y una atención cercana que haga
+                            sentir especial a cada cliente.</p>
+                    </article>
+                    <article class="pilar about__vision" data-reveal>
+                        <span class="pilar__icono"><svg class="icono"><use href="#i-vision"/></svg></span>
+                        <h3 class="pilar__title about__h4--vision">Visión</h3>
+                        <p class="pilar__p about__p--vision">Convertirnos en la marca de <strong>referencia en Bahía Blanca</strong>
+                            y la región, reconocida por la excelencia en nuestros productos, la
+                            innovación en sabores y el compromiso con nuestros clientes.</p>
+                    </article>
+                </div>
+
+                <div class="valores about__valores" data-reveal>
+                    <div class="valores__head">
+                        <span class="valores__icono"><svg class="icono"><use href="#i-valores"/></svg></span>
+                        <h3 class="valores__title about__h4--valores">Valores</h3>
+                        <p class="valores__bajada">Lo que no negociamos en cada cubanito.</p>
+                    </div>
+                    <ul class="valores__lista about__ul">
+                        <li class="valor about__ul__li">
+                            <span class="valor__icono"><svg class="icono"><use href="#i-calidad"/></svg></span>
+                            <h4 class="valor__title">Calidad</h4>
+                            <p class="valor__p"><strong>Calidad</strong> en lo que hacemos</p>
+                        </li>
+                        <li class="valor about__ul__li">
+                            <span class="valor__icono"><svg class="icono"><use href="#i-generoso"/></svg></span>
+                            <h4 class="valor__title">Generosidad</h4>
+                            <p class="valor__p">Relleno y baño bien <strong>generosos</strong></p>
+                        </li>
+                        <li class="valor about__ul__li">
+                            <span class="valor__icono"><svg class="icono"><use href="#i-corazon"/></svg></span>
+                            <h4 class="valor__title">Calidez</h4>
+                            <p class="valor__p">Atención <strong>cálida</strong> y cercana</p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
-        <section class="encargos">
-            <div class="ramo">
-                <h3 class="ramo__h3">Encargá tu ramo de cubanitos</h3>
-                <img class="ramo__img" src="assets/images/ramo-cubanitos.webp" alt="Ramo de cubanitos" title="Ramo" loading="lazy">
-            </div>
-            <div class="box">
-                <h3 class="box__h3">Encargá tu box de cubanitos</h3>
-                <img class="box__img" src="assets/images/box-cubanitos.webp" alt="Box de cubanitos" title="Box" loading="lazy">
+
+        <!-- UBICACIÓN -->
+        <section class="ubicacion seccion" id="ubicacion">
+            <div class="contenedor">
+                <div class="ubi about__ubi" data-reveal>
+                    <div class="ubi__info">
+                        <p class="seccion__eyebrow">Dónde estamos</p>
+                        <h2 class="seccion__title about__h4--ubi">Ubicación</h2>
+                        <p class="ubi__p about__p--ubi">Encontranos en <strong>Corenfeld y Panamá</strong>, sábados y domingos de 16:30hs hasta 20:00hs.</p>
+                        <ul class="ubi__datos">
+                            <li class="ubi__dato">
+                                <span class="ubi__dato-icono"><svg class="icono"><use href="#i-ubicacion"/></svg></span>
+                                <span><small>Esquina</small>Corenfeld y Panamá</span>
+                            </li>
+                            <li class="ubi__dato">
+                                <span class="ubi__dato-icono"><svg class="icono"><use href="#i-reloj"/></svg></span>
+                                <span><small>Horario</small>16:30 a 20:00 hs</span>
+                            </li>
+                        </ul>
+                        <ul class="semana" aria-label="Días de atención: sábados y domingos">
+                            <li class="semana__dia" data-dia="1" aria-hidden="true">L</li>
+                            <li class="semana__dia" data-dia="2" aria-hidden="true">M</li>
+                            <li class="semana__dia" data-dia="3" aria-hidden="true">M</li>
+                            <li class="semana__dia" data-dia="4" aria-hidden="true">J</li>
+                            <li class="semana__dia" data-dia="5" aria-hidden="true">V</li>
+                            <li class="semana__dia semana__dia--abierto" data-dia="6" aria-hidden="true">S</li>
+                            <li class="semana__dia semana__dia--abierto" data-dia="0" aria-hidden="true">D</li>
+                        </ul>
+                        <div class="ubi__acciones">
+                            <a class="boton boton--primario" href="https://www.google.com/maps/search/?api=1&query=Corenfeld+y+Panam%C3%A1%2C+Bah%C3%ADa+Blanca" target="_blank" rel="noopener noreferrer">
+                                <svg class="icono"><use href="#i-llegar"/></svg>
+                                Cómo llegar
+                            </a>
+                        </div>
+                    </div>
+                    <div class="ubi__mapa" aria-hidden="true">
+                        <svg class="mapa" viewBox="0 0 400 340" preserveAspectRatio="xMidYMid slice">
+                            <rect class="mapa__fondo" width="400" height="340"/>
+                            <g class="mapa__manzanas">
+                                <rect x="-20" y="-20" width="170" height="130" rx="14"/>
+                                <rect x="206" y="-20" width="220" height="130" rx="14"/>
+                                <rect x="-20" y="166" width="170" height="200" rx="14"/>
+                                <rect x="206" y="166" width="220" height="200" rx="14"/>
+                            </g>
+                            <g class="mapa__verde">
+                                <circle cx="52" cy="46" r="13"/><circle cx="96" cy="72" r="9"/>
+                                <circle cx="330" cy="250" r="15"/><circle cx="286" cy="296" r="10"/>
+                                <circle cx="70" cy="262" r="11"/>
+                            </g>
+                            <path class="mapa__linea" d="M178 0v340M0 138h400"/>
+                            <text class="mapa__calle" x="272" y="143">Panamá</text>
+                            <text class="mapa__calle" transform="translate(183 318) rotate(-90)">Corenfeld</text>
+                            <g class="mapa__pin">
+                                <circle class="mapa__onda" cx="178" cy="138" r="14"/>
+                                <circle class="mapa__onda mapa__onda--2" cx="178" cy="138" r="14"/>
+                                <g class="mapa__marcador">
+                                    <path d="M178 138c-14-18-24-30-24-44a24 24 0 0 1 48 0c0 14-10 26-24 44z"/>
+                                    <circle cx="178" cy="94" r="9"/>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
+                </div>
             </div>
         </section>
-        <section class="about" id="about">
-            <h3 class="about__title">Acerca de Cubanitos Deleite</h3>
-            <p class="about__p">Somos un emprendimiento familiar, que trabaja para la <strong>excelencia</strong> en nuestros productos y la mejor atención con nuestros clientes.</p>
-            <h4 class="about__h4 about__h4--trofeo">Ganadores del 3er puesto en cubanitos comunes 2025</h4>
-            <img class="about__img about__img--trofeo" src="assets/images/trofeo-cubanito-simple.webp" alt="Trofeo mejor cubanito simple" title="Mejor cubanito simple" loading="lazy">
-            
-            <div class="about__mision">
-                <img class="about__img about__img--mision" src="assets/images/mision.webp" alt="Logo misión" loading="lazy">
-                <h4 class="about__h4 about__h4--mision" id="mision">Misión</h4>
-            </div>
-            <p class="about__p about__p--mision"><strong>Endulzar momentos</strong> de las personas ofreciendo cubanitos artesanales de calidad,
-                con relleno generoso, baño artesanal y una atención cercana que haga
-                sentir especial a cada cliente.</p>
 
-            <div class="about__vision">
-                <img class="about__img about__img--vision" src="assets/images/vision.webp" alt="Logo visión" loading="lazy">
-                <h4 class="about__h4 about__h4--vision">Visión</h4>
+        <!-- CONTACTO -->
+        <section class="llamado" id="contacto">
+            <div class="llamado__deco" aria-hidden="true">
+                <span class="grana"></span><span class="grana"></span><span class="grana"></span>
+                <span class="grana"></span><span class="grana"></span><span class="grana"></span>
             </div>
-            <p class="about__p about__p--vision">Convertirnos en la marca de <strong> referencia en Bahía Blanca</strong>
-                y la región, reconocida por la excelencia en nuestros productos, la
-                innovación en sabores y el compromiso con nuestros clientes.</p>
-            
-            <div class="about__valores">
-                <img class="about__img--valores" src="assets/images/values.webp" alt="Logo valores" loading="lazy">
-                <h4 class="about__h4 about__h4--valores">Valores</h4>
+            <div class="contenedor llamado__inner" data-reveal>
+                <h2 class="llamado__title">Seguinos en Instagram</h2>
+                <p class="llamado__p">Contactanos por mensaje privado y hacé tu pedido.</p>
+                <a class="boton boton--claro" href="https://www.instagram.com/cubanitosdeleite" target="_blank" rel="noopener noreferrer">
+                    <svg class="icono"><use href="#i-instagram"/></svg>
+                    @cubanitosdeleite
+                </a>
             </div>
-            <ul class="about__ul">
-                <li class="about__ul__li"><strong>Calidad</strong> en lo que hacemos</li>
-                <li class="about__ul__li">Relleno y baño bien <strong>generosos</strong></li>
-                <li class="about__ul__li">Atención <strong>cálida</strong> y cercana</li>
-            </ul>
-
-            <div class="about__ubi">
-                <img class="about__img about__img--ubi" src="assets/images/location.webp" alt="Logo ubicación" loading="lazy">
-                <h4 class="about__h4 about__h4--ubi">Ubicación</h4>
-            </div>
-            <p class="about__p about__p--ubi">Encontranos en <strong>Corenfeld y Panamá</strong>, sábados y domingos de 16:30hs hasta 20:00hs.</p>
         </section>
 
         <!-- Instagram logo flotante -->
         <a class="ig-float" href="https://www.instagram.com/cubanitosdeleite" target="_blank" rel="noopener noreferrer" aria-label="Seguinos en Instagram">
-        <!-- SVG oficial del logo de Instagram -->
-        <svg class="ig-float__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff">
-        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.014 7.052.072 5.197.157 3.355.673 2.014 2.014.673 3.355.157 5.197.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.085 1.855.601 3.697 1.942 5.038 1.341 1.341 3.183 1.857 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.855-.085 3.697-.601 5.038-1.942 1.341-1.341 1.857-3.183 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.085-1.855-.601-3.697-1.942-5.038C20.645.673 18.803.157 16.948.072 15.668.014 15.259 0 12 0z"/>
-        <path d="M12 5.838a6.162 6.162 0 1 0 0 12.324A6.162 6.162 0 0 0 12 5.838zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
-        <circle cx="18.406" cy="5.594" r="1.44"/>
-    </svg>
-</a>
+            <!-- SVG oficial del logo de Instagram -->
+            <svg class="ig-float__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#fff">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.334 3.608 1.308.975.975 1.246 2.242 1.308 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.334 2.633-1.308 3.608-.975.975-2.242 1.246-3.608 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.334-3.608-1.308-.975-.975-1.246-2.242-1.308-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.334-2.633 1.308-3.608.975-.975 2.242-1.246 3.608-1.308C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.014 7.052.072 5.197.157 3.355.673 2.014 2.014.673 3.355.157 5.197.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.085 1.855.601 3.697 1.942 5.038 1.341 1.341 3.183 1.857 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.855-.085 3.697-.601 5.038-1.942 1.341-1.341 1.857-3.183 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.085-1.855-.601-3.697-1.942-5.038C20.645.673 18.803.157 16.948.072 15.668.014 15.259 0 12 0z"/>
+                <path d="M12 5.838a6.162 6.162 0 1 0 0 12.324A6.162 6.162 0 0 0 12 5.838zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
+                <circle cx="18.406" cy="5.594" r="1.44"/>
+            </svg>
+        </a>
     </main>
-    <footer class="footer" id="contacto">
-        <div class="footer__descrip">
-            <ul class="footer__ul">
-                <li class="footer__item footer__item--seguinos">Seguinos en</li>
-                <li class="footer__item footer__item--instagram-logo"><a href="https://www.instagram.com/cubanitosdeleite" class="basil--instagram-outline" title="Instagram" target="_blank" rel="noopener noreferrer"></a></li>
-                <li class="footer__item footer__item--contactanos">Contactanos por mensaje privado</li>
+
+    <footer class="footer">
+        <div class="contenedor footer__grid">
+            <div class="footer__marca">
+                <p class="footer__nombre">Cubanitos <span>Deleite</span></p>
+                <p class="footer__lema">Endulzando momentos</p>
+            </div>
+            <ul class="footer__nav">
+                <li><a class="footer__link" href="#productos">Productos</a></li>
+                <li><a class="footer__link" href="#encargos">Encargos</a></li>
+                <li><a class="footer__link" href="#about">Acerca de</a></li>
+                <li><a class="footer__link" href="#ubicacion">Ubicación</a></li>
             </ul>
+            <div class="footer__descrip">
+                <p class="footer__item footer__item--seguinos">Seguinos en</p>
+                <a class="footer__ig" href="https://www.instagram.com/cubanitosdeleite" title="Instagram" target="_blank" rel="noopener noreferrer">
+                    <svg class="icono"><use href="#i-instagram"/></svg>
+                    @cubanitosdeleite
+                </a>
+                <p class="footer__item footer__item--contactanos">Contactanos por mensaje privado</p>
+            </div>
         </div>
-        <div class="footer__info">
-            <p class="footer__p">© Todos los derechos reservados</p>
-        </div>
-        <div class="footer__info footer__info--github">
-            <a class="mdi--github" href="https://github.com/JuanjoDev-xml/cubanitos-deleite" title="GitHub" target="_blank" rel="noopener noreferrer"></a>
+        <div class="contenedor footer__info">
+            <p class="footer__p">© <span id="anio"></span> Cubanitos Deleite · Todos los derechos reservados</p>
+            <a class="footer__github" href="https://github.com/JuanjoDev-xml/cubanitos-deleite" title="GitHub" target="_blank" rel="noopener noreferrer">
+                <svg class="icono"><use href="#i-github"/></svg>
+                Código en GitHub
+            </a>
         </div>
     </footer>
+
+    <!-- Visor de productos -->
+    <dialog class="visor" id="visor" aria-labelledby="visor-titulo">
+        <div class="visor__caja">
+            <button class="visor__cerrar" type="button" aria-label="Cerrar">
+                <svg class="icono"><use href="#i-cerrar"/></svg>
+            </button>
+            <div class="visor__media">
+                <img class="visor__img" src="" alt="">
+                <button class="visor__nav visor__nav--izq" type="button" aria-label="Producto anterior">
+                    <svg class="icono"><use href="#i-flecha-izq"/></svg>
+                </button>
+                <button class="visor__nav visor__nav--der" type="button" aria-label="Producto siguiente">
+                    <svg class="icono"><use href="#i-flecha"/></svg>
+                </button>
+            </div>
+            <div class="visor__pie">
+                <div>
+                    <p class="visor__contador" aria-live="polite"></p>
+                    <h3 class="visor__titulo" id="visor-titulo"></h3>
+                </div>
+                <a class="boton boton--primario boton--chico" href="https://www.instagram.com/cubanitosdeleite" target="_blank" rel="noopener noreferrer">
+                    <svg class="icono"><use href="#i-instagram"/></svg>
+                    Pedir
+                </a>
+            </div>
+        </div>
+    </dialog>
+
     <script src="code.js"></script>
 </body>
 </html>
